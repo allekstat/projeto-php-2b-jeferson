@@ -1,6 +1,13 @@
 body {
-  background-color: #00000010;
+    background-color: #00000010;
 }
 .barra-lateral {
-  background-color: #00000010;
+    background-color: #00000010;
+}
+[class^='tela-'] > .col > .row {
+    background-color: #00000010;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

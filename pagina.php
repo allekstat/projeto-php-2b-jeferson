@@ -34,8 +34,49 @@
                 <div class="tela-materiais row">
                     <div class="col">aqui vão os materiais e os cadastros de mais materiais</div>
                 </div>
-                <div style="display: none" class="tela-planos row">
-                    <div class="col">aqui vai a parte de colocar quanto de cada material, as dimensoes do objeto e tudo mais</div>
+                <div style="display: none" class="tela-planos row container">
+                    <div class="col">
+                        <div class="py-2 row">
+                            <div class="col">
+                                <input placeholder='Nome da peça' class="campo-nome form-control" />
+                            </div>
+                            <div class="col">
+                                <select placeholder='Tipo de material' class="campo-tipo form-control">
+                                    <option value="mdf-nogueira-veneto">Nogueira Veneto</option>
+                                    <option value="mdf-carvalho-amendoa">Carvalho Amêndoa</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
+                            </div>
+                            <div class="col">
+                                <input placeholder='Largura (mm)' type='number' step='1' min='1' class="campo-largura form-control" />
+                            </div>
+                            <div class="col">
+                                <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
+                            </div>
+                        </div>
+                        <div class="py-2 row">
+                            <div class="col">
+                                <input placeholder='Nome da peça' class="campo-nome form-control" />
+                            </div>
+                            <div class="col">
+                                <select placeholder='Tipo de material' class="campo-tipo form-control">
+                                    <option value="mdf-nogueira-veneto">Nogueira Veneto</option>
+                                    <option value="mdf-carvalho-amendoa">Carvalho Amêndoa</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
+                            </div>
+                            <div class="col">
+                                <input placeholder='Largura (mm)' type='number' step='1' min='1' class="campo-largura form-control" />
+                            </div>
+                            <div class="col">
+                                <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div style="display: none" class="tela-resultados row">
                     <div class="col">aqui vai aparecer o resultado dos calculos, seja só um valor, ou até uma imagem</div>
