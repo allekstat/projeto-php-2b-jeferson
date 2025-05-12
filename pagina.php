@@ -1,4 +1,4 @@
-<?php require_once 'backend.php' ?>
+<?php require_once 'calculos.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cálculo de Custos - Marcenaria</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,17 +17,17 @@
             <div class="barra-lateral col-sm-3">
                 <div class="row">
                     <div class="col">
-                        <a class="aba-materiais btn btn-link">Materiais</a>
+                        <a class="aba-materiais btn btn-link btn-block">Materiais</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a class="aba-planos btn btn-link">Planos</a>
+                        <a class="aba-planos btn btn-link btn-block">Planos</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a class="aba-resultados btn btn-link">Resultados</a>
+                        <a class="aba-resultados btn btn-link btn-block">Resultados</a>
                     </div>
                 </div>
             </div>
@@ -34,8 +35,8 @@
                 <div class="tela-materiais row">
                     <div class="col">aqui vão os materiais e os cadastros de mais materiais</div>
                 </div>
-                <div style="display: none" class="tela-planos row container">
-                    <div class="col">
+                <div style="display: none" class="tela-planos align-items-end row container">
+                    <div class="campos col">
                         <div class="py-2 row">
                             <div class="col">
                                 <input placeholder='Nome da peça' class="campo-nome form-control" />
@@ -76,6 +77,14 @@
                                 <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
                             </div>
                         </div>
+                    </div>
+                    <div class="pb-3 mb-2 d-flex col-sm-1">
+                        <a class="adicionar-campo btn btn-link">
+                            <i class="bi bi-plus-circle"></i>
+                        </a>
+                        <a class="remover-campo btn btn-link">
+                            <i class="bi bi-dash-circle"></i>
+                        </a>
                     </div>
                 </div>
                 <div style="display: none" class="tela-resultados row">
