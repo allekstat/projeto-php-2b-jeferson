@@ -1,4 +1,4 @@
-<?php require_once 'calculos.php' ?>
+<?php require_once 'backend.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,26 +37,6 @@
                 </div>
                 <div style="display: none" class="tela-planos align-items-end row container">
                     <div class="campos col">
-                        <div class="py-2 row">
-                            <div class="col">
-                                <input placeholder='Nome da peça' class="campo-nome form-control" />
-                            </div>
-                            <div class="col">
-                                <select placeholder='Tipo de material' class="campo-tipo form-control">
-                                    <option value="mdf-nogueira-veneto">Nogueira Veneto</option>
-                                    <option value="mdf-carvalho-amendoa">Carvalho Amêndoa</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
-                            </div>
-                            <div class="col">
-                                <input placeholder='Largura (mm)' type='number' step='1' min='1' class="campo-largura form-control" />
-                            </div>
-                            <div class="col">
-                                <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
-                            </div>
-                        </div>
                         <div class="py-2 row">
                             <div class="col">
                                 <input placeholder='Nome da peça' class="campo-nome form-control" />
