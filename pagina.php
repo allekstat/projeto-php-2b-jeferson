@@ -57,26 +57,6 @@
                                 <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
                             </div>
                         </div>
-                        <div class="py-2 row">
-                            <div class="col">
-                                <input placeholder='Nome da peça' class="campo-nome form-control" />
-                            </div>
-                            <div class="col">
-                                <select placeholder='Tipo de material' class="campo-tipo form-control">
-                                    <option value="mdf-nogueira-veneto">Nogueira Veneto</option>
-                                    <option value="mdf-carvalho-amendoa">Carvalho Amêndoa</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
-                            </div>
-                            <div class="col">
-                                <input placeholder='Largura (mm)' type='number' step='1' min='1' class="campo-largura form-control" />
-                            </div>
-                            <div class="col">
-                                <input placeholder='Espessura (mm)' type='number' step='1' min='1' class="campo-espessura form-control" />
-                            </div>
-                        </div>
                     </div>
                     <div class="pb-3 mb-2 d-flex col-sm-1">
                         <a class="adicionar-campo btn btn-link">
