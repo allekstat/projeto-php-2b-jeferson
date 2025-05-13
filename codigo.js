@@ -13,6 +13,23 @@ function mudar_tela({ data: tela })
         .siblings()
         .hide();
 }
+async function listar_materiais()
+{
+    const materiais = await $.get('materiais.php');
+    $('.materiais.col').empty();
+    for (let i = 0; i < materiais.length; i++)
+    {
+        $('.materiais.col').append(`
+            <div class='row'>
+                <div class='col'>${materiais[i].nome}</div>
+            </div>
+        `);
+    }
+}
+function adicionar_material()
+{
+    //
+}
 function adicionar_campo()
 {
     $('div.tela-planos .campos')

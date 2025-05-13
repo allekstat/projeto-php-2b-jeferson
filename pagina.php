@@ -32,8 +32,8 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <div class="tela-materiais row">
-                    <div class="col">aqui vão os materiais e os cadastros de mais materiais</div>
+                <div class="tela-materiais row container">
+                    <div class="materiais col"></div>
                 </div>
                 <div style="display: none" class="tela-planos align-items-end row container">
                     <div class="campos col">
