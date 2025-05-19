@@ -32,8 +32,22 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <div class="tela-materiais row container">
-                    <div class="materiais col"></div>
+                <div class="tela-materiais align-items-end row container">
+                    <div class="materiais col">
+                        <div class="py-2 row">
+                            <div class="col">1</div>
+                            <div class="col">2</div>
+                            <div class="col">3</div>
+                        </div>
+                    </div>
+                    <div class="pb-3 mb-2 d-flex col-sm-1">
+                        <a class="adicionar-material btn btn-link">
+                            <i class="bi bi-plus-circle"></i>
+                        </a>
+                        <a class="remover-material btn btn-link">
+                            <i class="bi bi-dash-circle"></i>
+                        </a>
+                    </div>
                 </div>
                 <div style="display: none" class="tela-planos align-items-end row container">
                     <div class="campos col">
