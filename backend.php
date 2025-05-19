@@ -35,9 +35,11 @@ function select(array | string $campos = '*', string $tabela) : array
     header('Content-Type: application/json');
     return $dados;
 }
-function insert(string $tabela, array | null $campos, array $valores) : int | false
+function insert(string $tabela, string | array | null $campos, string | array $valores) : int | false
 {
     if (is_null($campos)) $campos = [];
+    if (is_string($campos)) $campos = [$campos];
+    if (is_string($valores)) $valores = [$valores];
     $campos = implode(', ', $campos);
     for ($i = 0; $i < count($valores); $i++)
     {
@@ -47,6 +49,41 @@ function insert(string $tabela, array | null $campos, array $valores) : int | fa
     $valores = implode(', ', $valores);
     if ($campos != '') $campos = "($campos)";
     $sql = "INSERT INTO $tabela $campos VALUES ($valores)";
+    $conexao = conexao();
+    $estruturamento = $conexao -> prepare($sql);
+    $afetados = $estruturamento -> execute();
+    $conexao = null;
+    header('Content-Type: application/json');
+    return $afetados;
+}
+function delete(string $tabela, string | array $condicoes) : int | false
+{
+    if (is_string($condicoes)) $condicoes = [$condicoes];
+    $condicoes = implode(' AND ', $condicoes);
+    $sql = "DELETE FROM $tabela WHERE $condicoes";
+    $conexao = conexao();
+    $estruturamento = $conexao -> prepare($sql);
+    $afetados = $estruturamento -> execute();
+    $conexao = null;
+    header('Content-Type: application/json');
+    return $afetados;
+}
+function update(string $tabela, string | array $campos, string | array $valores, string | array $condicoes) : int | false
+{
+    if (is_string($campos)) $campos = [$campos];
+    if (is_string($valores)) $valores = [$valores];
+    if (is_string($condicoes)) $condicoes = [$condicoes];
+    if (count($campos) !== count($valores)) return false;
+    $sets = [];
+    for ($i = 0; $i < count($campos); $i++)
+    {
+        if (is_null($valores[$i])) $valores[$i] = 'null';
+        else if (is_string($valores[$i])) $valores[$i] = '"' . $valores[$i] . '"';
+        $sets[] = $campos[$i] . ' = ' . $valores[$i];
+    }
+    $sets = implode(', ', $sets);
+    $condicoes = implode(' AND ', $condicoes);
+    $sql = "UPDATE $tabela SET $sets WHERE $condicoes";
     $conexao = conexao();
     $estruturamento = $conexao -> prepare($sql);
     $afetados = $estruturamento -> execute();
