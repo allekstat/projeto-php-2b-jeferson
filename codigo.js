@@ -28,10 +28,6 @@ async function listar_materiais()
         `);
     }
 }
-function adicionar_material()
-{
-    
-}
 function adicionar_campo()
 {
     $('div.tela-planos .campos')
@@ -64,4 +60,26 @@ function remover_campo()
         .children()
         .last()
         .remove();
+}
+function adicionar_material()
+{
+    $.ajax();
+}
+async function chamarapi(metodo, url, dados)
+{
+    return await $.ajax(
+    {
+        method: metodo || 'GET',
+        url: url || 'api.php',
+        data: dados || {},
+        dataType: 'json',
+        success: function (resposta, status, xhr)
+        {
+            return resposta;
+        },
+        error: function (xhr, status, erro)
+        {
+            return {erro: erro, status: status, xhr: xhr};
+        }
+    });
 }
