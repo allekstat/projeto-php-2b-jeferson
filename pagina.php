@@ -17,6 +17,8 @@
             <div class="barra-lateral col-sm-3">
                 <div class="row">
                     <div class="col">
+                <div>
+                    </div>
                         <a class="aba-materiais btn btn-link btn-block">Materiais</a>
                     </div>
                 </div>
@@ -32,6 +34,20 @@
                 </div>
             </div>
             <div class="col-sm-9">
+                <div style="display: none" class="tela-fotos row container">
+                    <div class="fotos col">
+                        <img class="galeria" src="images/nogueiraVeneto.jpg" alt="">
+                        <p>Nogueira Veneto</p>
+                    </div>
+                    <div>
+                        <img class="galeria" src="images/carvalhoAmendoa.jpg" alt="">
+                        <p>Carvalho Amendoa</p>
+                    </div>
+                    <div>
+                        <img class="galeria" src="images/itauba.png" alt="">
+                        <p>Itaúba</p>
+                    </div>
+                </div>
                 <div class="tela-materiais align-items-end row container">
                     <div class="materiais col">
                         <div class="pl-2 campos-material row">
@@ -84,9 +100,10 @@
                         </a>
                     </div>
                 </div>
-                <div style="display: none" class="tela-resultados row">
+
+                <divs style="display: none" class="tela-resultados reverse row">
                     <div class="col">aqui vai aparecer o resultado dos calculos, seja só um valor, ou até uma imagem</div>
-                </div>
+                </divs>
             </div>
         </div>
     </div>

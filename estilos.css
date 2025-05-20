@@ -2,7 +2,7 @@ body {
     background-color: #00000010;
 }
 div.barra-lateral {
-    background-color: #00000010;
+    background-color: #61191910;
 }
 div[class^='tela-'] > .col > .row {
     background-color: #00000010;
@@ -10,4 +10,12 @@ div[class^='tela-'] > .col > .row {
     padding-bottom: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.galeria{
+    width: 20%;
+    max-width: 10%;
+    margin: 0 auto;
+    padding: 0.5em;
+    border-radius: 0.5em;  
 }
