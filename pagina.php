@@ -17,8 +17,6 @@
             <div class="barra-lateral col-sm-3">
                 <div class="row">
                     <div class="col">
-                <div>
-                    </div>
                         <a class="aba-materiais btn btn-link btn-block">Materiais</a>
                     </div>
                 </div>
@@ -101,9 +99,9 @@
                     </div>
                 </div>
 
-                <divs style="display: none" class="tela-resultados reverse row">
+                <divs style="display: none" class="tela-resultados row">
                     <div class="col">aqui vai aparecer o resultado dos calculos, seja só um valor, ou até uma imagem</div>
-                </divs>
+                </div>
             </div>
         </div>
     </div>

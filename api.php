@@ -1,4 +1,4 @@
-<?php include 'backend.php';
+<?php require_once 'backend.php';
 if ($_SERVER['REQUEST_METHOD'] === 'GET')
 {
     if ($_REQUEST['tabela'] === 'materiais')
