@@ -64,20 +64,31 @@ function remover_campo()
 }
 function buscar_materiais()
 {
+    $('.campos-material').prevAll().remove();
     chamarapi('GET', 'api.php', {tabela: 'materiais', campos: '*'})
-    .then(j => j.forEach(v => $('.campos-material').before(`
-        <div class='py-2 row'>
-            <div class='col'>
-                <span class='material-nome'>${v.nome}</span>
-            </div>
-            <div class='col'>
-               <span class='material-preco'>${v.preco}</span>
-            </div>
-            <div class='col'>
-                <span class='material-quantidade'>${v.quantidade}</span>
-            </div>
-        </div>
-    `)));
+    .then(j => j.forEach(v => 
+        {
+            $('.campos-material').before(`
+                <div data-material='${v.id}' class='py-2 align-items-center row'>
+                    <div class='col'>
+                        <span class='material-nome'>${v.nome}</span>
+                    </div>
+                    <div class='col'>
+                    <span class='material-preco'>${v.preco}</span>
+                    </div>
+                    <div class='col'>
+                        <span class='material-quantidade'>${v.quantidade}</span>
+                    </div>
+                    <div class="col-sm-1">
+                        <a class="apagar-material btn btn-link text-danger">
+                            <i class="bi bi-x-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            `);
+            $('.apagar-material').click(remover_material);
+        }
+    ));
 }
 function adicionar_material()
 {
@@ -94,11 +105,13 @@ function adicionar_material()
             </div>
         </div>
     `);
-    chamarapi('POST', 'api.php', {tabela: 'materiais', campos: ['nome', 'preco', 'quantidade'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val() ]});
+    chamarapi('POST', 'api.php', {tabela: 'materiais', campos: ['nome', 'preco', 'quantidade'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val() ]})
+    .then( () => buscar_materiais());
 }
 function remover_material()
 {
-    chamarapi('POST', 'api.php', {deletar: 1, campos: 'nome', condicoes: 'id = ' + id});
+    chamarapi('POST', 'api.php', {deletar: 1, campos: 'nome', condicoes: 'id = ' + $(this).parent().parent().data('material')})
+    .then(() => buscar_materiais());
 }
 async function chamarapi(metodo, url, dados)
 {

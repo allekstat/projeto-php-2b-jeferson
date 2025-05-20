@@ -46,12 +46,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pb-3 mb-2 d-flex col-sm-1">
+                    <div class="pb-3 mb-3 d-flex col-sm-1">
                         <a class="adicionar-material btn btn-link">
                             <i class="bi bi-plus-circle"></i>
-                        </a>
-                        <a class="remover-material btn btn-link">
-                            <i class="bi bi-dash-circle"></i>
                         </a>
                     </div>
                 </div>
@@ -78,12 +75,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pb-3 mb-2 d-flex col-sm-1">
+                    <div class="pb-2 mb-3 d-flex col-sm-1">
                         <a class="adicionar-campo btn btn-link">
                             <i class="bi bi-plus-circle"></i>
                         </a>
-                        <a class="remover-campo btn btn-link">
-                            <i class="bi bi-dash-circle"></i>
+                        <a class="remover-campo btn btn-link text-danger">
+                            <i class="bi bi-x-circle"></i>
                         </a>
                     </div>
                 </div>
