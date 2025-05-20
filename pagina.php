@@ -34,10 +34,16 @@
             <div class="col-sm-9">
                 <div class="tela-materiais align-items-end row container">
                     <div class="materiais col">
-                        <div class="py-2 row">
-                            <div class="col">1</div>
-                            <div class="col">2</div>
-                            <div class="col">3</div>
+                        <div class="pl-2 campos-material row">
+                            <div class="col">
+                                <input type="text" id='nome-material' class='form-control'>
+                            </div>
+                            <div class="col">
+                                <input type="number" id='preco-material' class='form-control'>
+                            </div>
+                            <div class="col">
+                                <input type="text" id='quantidade-material' class='form-control'>
+                            </div>
                         </div>
                     </div>
                     <div class="pb-3 mb-2 d-flex col-sm-1">

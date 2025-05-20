@@ -7,6 +7,7 @@ $(document).ready(async function ()
     $('a.remover-campo').click(remover_campo);
     $('a.adicionar-material').click(adicionar_material);
     $('a.remover-material').click(remover_material);
+    buscar_materiais();
 });
 function mudar_tela({ data: tela })
 {
@@ -61,9 +62,43 @@ function remover_campo()
         .last()
         .remove();
 }
+function buscar_materiais()
+{
+    chamarapi('GET', 'api.php', {tabela: 'materiais', campos: '*'})
+    .then(j => j.forEach(v => $('.campos-material').before(`
+        <div class='py-2 row'>
+            <div class='col'>
+                <span class='material-nome'>${v.nome}</span>
+            </div>
+            <div class='col'>
+               <span class='material-preco'>${v.preco}</span>
+            </div>
+            <div class='col'>
+                <span class='material-quantidade'>${v.quantidade}</span>
+            </div>
+        </div>
+    `)));
+}
 function adicionar_material()
 {
-    $.ajax();
+    $('.campos-material').before(`
+        <div class='py-2 row'>
+            <div class='col'>
+                <span class='material-nome'>${$('#nome-material').val()}</span>
+            </div>
+            <div class='col'>
+               <span class='material-preco'>${$('#preco-material').val()}</span>
+            </div>
+            <div class='col'>
+                <span class='material-quantidade'>${$('#quantidade-material').val()}</span>
+            </div>
+        </div>
+    `);
+    chamarapi('POST', 'api.php', {tabela: 'materiais', campos: ['nome', 'preco', 'quantidade'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val() ]});
+}
+function remover_material()
+{
+    chamarapi('POST', 'api.php', {deletar: 1, campos: 'nome', condicoes: 'id = ' + id});
 }
 async function chamarapi(metodo, url, dados)
 {
@@ -73,7 +108,7 @@ async function chamarapi(metodo, url, dados)
         url: url || 'api.php',
         data: dados || {},
         dataType: 'json',
-        success: function (resposta, status, xhr)
+        success: function (resposta)
         {
             return resposta;
         },
