@@ -5,6 +5,8 @@ $(document).ready(async function ()
     $('a.aba-resultados').click('resultados', mudar_tela);
     $('a.adicionar-campo').click(adicionar_campo);
     $('a.remover-campo').click(remover_campo);
+    $('a.adicionar-material').click(adicionar_material);
+    $('a.remover-material').click(remover_material);
 });
 function mudar_tela({ data: tela })
 {
@@ -20,15 +22,11 @@ async function listar_materiais()
     for (let i = 0; i < materiais.length; i++)
     {
         $('.materiais.col').append(`
-            <div class='row'>
+            <div class='py-2 row'>
                 <div class='col'>${materiais[i].nome}</div>
             </div>
         `);
     }
-}
-function adicionar_material()
-{
-    //
 }
 function adicionar_campo()
 {
@@ -62,4 +60,26 @@ function remover_campo()
         .children()
         .last()
         .remove();
+}
+function adicionar_material()
+{
+    $.ajax();
+}
+async function chamarapi(metodo, url, dados)
+{
+    return await $.ajax(
+    {
+        method: metodo || 'GET',
+        url: url || 'api.php',
+        data: dados || {},
+        dataType: 'json',
+        success: function (resposta, status, xhr)
+        {
+            return resposta;
+        },
+        error: function (xhr, status, erro)
+        {
+            return {erro: erro, status: status, xhr: xhr};
+        }
+    });
 }
