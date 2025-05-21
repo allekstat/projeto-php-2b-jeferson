@@ -32,19 +32,7 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <div style="display: none" class="tela-fotos row container">
-                    <div class="fotos col">
-                        <img class="galeria" src="images/nogueiraVeneto.jpg" alt="">
-                        <p>Nogueira Veneto</p>
-                    </div>
-                    <div>
-                        <img class="galeria" src="images/carvalhoAmendoa.jpg" alt="">
-                        <p>Carvalho Amendoa</p>
-                    </div>
-                    <div>
-                        <img class="galeria" src="images/itauba.png" alt="">
-                        <p>Itaúba</p>
-                    </div>
+               
                 </div>
                 <div class="tela-materiais align-items-end row container">
                     <div class="materiais col">
@@ -75,8 +63,14 @@
                             <div class="col">
                                 <select placeholder='Tipo de material' class="campo-tipo form-control">
                                     <option value="mdf-nogueira">Nogueira</option>
+                                    <img class="galeria" src="images/nogueiraVeneto.jpg" alt="">
+                                    
                                     <option value="mdf-carvalho">Carvalho</option>
+                                    <img class="galeria" src="images/carvalhoAmendoa.jpg" alt="">
+
                                     <option value="mdf-itauba">Itauba</option>
+                                    <img class="galeria" src="images/itauba.png" alt="">
+
                                     <option value="mdf-cedro">Cedro</option>
                                     <option value="mdf-pinus">Pinus</option>
                                     <option value="mdf-cumaru">Cumaru</option>
