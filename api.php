@@ -6,6 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET')
         $dados = select('*', 'materiais');
         retorno($dados);
     }
+    else if ($_REQUEST['tabela'] === 'madeiras')
+    {
+        $dados = select('*', 'madeira');
+        retorno($dados);
+    }
 }
 else if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {

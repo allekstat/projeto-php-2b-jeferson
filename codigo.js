@@ -15,6 +15,20 @@ function mudar_tela({ data: tela })
         .show()
         .siblings()
         .hide();
+    if (tela == 'planos')
+    {
+        chamarapi('GET', 'api.php', {tabela: 'madeiras'})
+        .then(function (dados)
+        {
+            $('.campos .campo-tipo').empty();
+            for (let i = 0; i < dados.length; i++)
+            {
+                $('.campos .campo-tipo').append(`
+                    <option value='${dados[i].Cod_mad}'>${dados[i].Nome_mad}</option>
+                `);
+            }
+        });
+    }
 }
 async function listar_materiais()
 {

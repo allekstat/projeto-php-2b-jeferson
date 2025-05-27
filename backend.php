@@ -3,7 +3,7 @@ ini_set('display_errors', '1');
 function conexao() : PDO | null
 {
     $host = 'localhost';
-    $dbname = 'jefphp';
+    $dbname = 'loja_madeira';
     $username = 'root';
     $password = 'root';
     $dsn = "mysql:host=$host;dbname=$dbname";
@@ -21,6 +21,7 @@ function conexao() : PDO | null
 }
 function retorno(array $dados)
 {
+    header('Content-Type: application/json');
     echo json_encode($dados);
     exit();
 }

@@ -32,8 +32,6 @@
                 </div>
             </div>
             <div class="col-sm-9">
-               
-                </div>
                 <div class="tela-materiais align-items-end row container">
                     <div class="materiais col">
                         <div class="pl-2 campos-material row">
@@ -61,30 +59,7 @@
                                 <input placeholder='Nome da peça' class="campo-nome form-control" />
                             </div>
                             <div class="col">
-                                <select placeholder='Tipo de material' class="campo-tipo form-control">
-                                    <option value="mdf-nogueira">Nogueira</option>
-                                    <img class="galeria" src="images/nogueiraVeneto.jpg" alt="">
-                                    
-                                    <option value="mdf-carvalho">Carvalho</option>
-                                    <img class="galeria" src="images/carvalhoAmendoa.jpg" alt="">
-
-                                    <option value="mdf-itauba">Itauba</option>
-                                    <img class="galeria" src="images/itauba.png" alt="">
-
-                                    <option value="mdf-cedro">Cedro</option>
-                                    <option value="mdf-pinus">Pinus</option>
-                                    <option value="mdf-cumaru">Cumaru</option>
-                                    <option value="mdf-mogno">Mogno</option>
-                                    <option value="mdf-eucalipto">Eucalipto</option>
-                                    <option value="mdf-jequitiba">Jequitiba</option>
-                                    <option value="mdf-ipe">ipe</option>
-                                    <option value="mdf-jacaranda">Jacaranda</option>
-                                    <option value="mdf-jatoba">Jatoba</option>
-                                    <option value="mdf-pinho">Pinho</option>
-                                    <option value="mdf-branco">MDF Branco</option>
-                                    <option value="mdf-texturizado">MDF Texturizado</option>
-                                    
-                                </select>
+                                <select placeholder='Tipo de material' class="campo-tipo form-control"></select>
                             </div>
                             <div class="col">
                                 <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
