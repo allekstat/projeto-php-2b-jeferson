@@ -55,6 +55,21 @@ function adicionar_campo()
                     <select placeholder='Tipo de material' class='campo-tipo form-control'>
                         <option value='mdf-nogueira-veneto'>Nogueira Veneto</option>
                         <option value='mdf-carvalho-amendoa'>Carvalho Amêndoa</option>
+                        <option value='mdf-nogueira'>Nogueira</option>
+                        <option value='mdf-carvalho'>Carvalho</option>
+                        <option value='mdf-itauba'>Itauba</option>
+                        <option value='mdf-cedro'>Cedro</option>
+                        <option value='mdf-pinus'>Pinus</option>
+                        <option value='mdf-cumaru'>Cumaru</option>
+                        <option value='mdf-mogno'>Mogno</option>
+                        <option value='mdf-eucalipto'>Eucalipto</option>
+                        <option value='mdf-jequitiba'>Jequitiba</option>
+                        <option value='mdf-ipe'>ipe</option>
+                        <option value='mdf-jacaranda'>Jacaranda</option>
+                        <option value='mdf-jatoba'>Jatoba</option>
+                        <option value='mdf-pinho'>Pinho</option>
+                        <option value='mdf-branco'>MDF Branco</option>
+                        <option value='mdf-texturizado'>MDF Texturizado</option>
                     </select>
                 </div>
                 <div class='col'>

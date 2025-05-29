@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cálculo de Custos - Marcenaria</title>
-    <link href="/projeto-php-2b-jeferson/images/Logo-PlanoDeCorte.jpg" rel="icon"/>
+    <link href="/projeto-php-2b-jeferson/images/Logo-PlanoDeCorteMini.jpg" rel="icon"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="estilos.css">
@@ -37,13 +37,13 @@
                     <div class="materiais col">
                         <div class="pl-2 campos-material row">
                             <div class="col">
-                                <input type="text" id='nome-material' class='form-control'>
+                                <input type="text" placeholder="Material" id='nome-material' class='form-control'>
                             </div>
                             <div class="col">
-                                <input type="number" id='preco-material' class='form-control'>
+                                <input type="number" placeholder="Preço" id='preco-material' class='form-control'>
                             </div>
                             <div class="col">
-                                <input type="text" id='quantidade-material' class='form-control'>
+                                <input type="text" placeholder="Quantidade" id='quantidade-material' class='form-control'>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,23 @@
                                 <input placeholder='Nome da peça' class="campo-nome form-control" />
                             </div>
                             <div class="col">
-                                <select placeholder='Tipo de material' class="campo-tipo form-control"></select>
+                                <select placeholder='Tipo de material' class="campo-tipo form-control">
+                                    <option value="mdf-nogueira">Nogueira</option>
+                                    <option value="mdf-carvalho">Carvalho</option>
+                                    <option value="mdf-itauba">Itauba</option>
+                                    <option value="mdf-cedro">Cedro</option>
+                                    <option value="mdf-pinus">Pinus</option>
+                                    <option value="mdf-cumaru">Cumaru</option>
+                                    <option value="mdf-mogno">Mogno</option>
+                                    <option value="mdf-eucalipto">Eucalipto</option>
+                                    <option value="mdf-jequitiba">Jequitiba</option>
+                                    <option value="mdf-ipe">ipe</option>
+                                    <option value="mdf-jacaranda">Jacaranda</option>
+                                    <option value="mdf-jatoba">Jatoba</option>
+                                    <option value="mdf-pinho">Pinho</option>
+                                    <option value="mdf-branco">MDF Branco</option>
+                                    <option value="mdf-texturizado">MDF Texturizado</option>
+                                </select>
                             </div>
                             <div class="col">
                                 <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class="campo-comprimento form-control" />
