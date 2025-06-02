@@ -29,6 +29,10 @@ function mudar_tela({ data: tela })
             }
         });
     }
+    if(tela == 'resultados'){
+        
+    }
+
 }
 async function listar_materiais()
 {
