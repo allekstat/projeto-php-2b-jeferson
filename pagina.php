@@ -27,13 +27,13 @@
                 </div>
                     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 h-100">
                     <div class="w-100 py-2">
-                        <a class="aba-materiais btn btn-warning w-100 mb-2">Materiais</a>
+                        <a class="aba-materiais button btn btn-warning w-100 mb-2">Materiais</a>
                     </div>
                     <div class="w-100 py-2">
-                        <a class="aba-planos btn btn-warning w-100 mb-2">Planos</a>
+                        <a class="aba-planos button btn btn-warning w-100 mb-2">Planos</a>
                     </div>
                     <div class="w-100 py-2">
-                        <a class="aba-resultados btn btn-warning w-100 mb-2">Resultados</a>
+                        <a class="aba-resultados button btn btn-warning w-100 mb-2">Resultados</a>
                     </div>
                 </div>
 

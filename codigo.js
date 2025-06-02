@@ -162,3 +162,13 @@ async function chamarapi(metodo, url, dados)
         }
     });
 }
+
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        this.classList.add('active');
+    });
+});
