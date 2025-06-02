@@ -15,6 +15,7 @@ function mudar_tela({ data: tela })
         .show()
         .siblings()
         .hide();
+        
     if (tela == 'planos')
     {
         chamarapi('GET', 'api.php', {tabela: 'madeiras'})
@@ -28,9 +29,6 @@ function mudar_tela({ data: tela })
                 `);
             }
         });
-    }
-    if(tela == 'resultados'){
-        
     }
 
 }

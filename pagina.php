@@ -117,13 +117,19 @@
                     </div>
                 </div>
 
-                <divs style="display: none" class="tela-resultados row container">
+                <div style="display: none" class="tela-resultados align-items-end row container">
                     <div class="text-center py-3">
                         <div class="d-flex justify-content-center align-items-center">
                             <i class="fas fa-tools text-warning fs-1 me-2"></i>
-                            <span class="text-black fs-4 fw-bold">PLANOS</span>
+                            <span class="text-black fs-4 fw-bold">RESULTADOS</span>
                         </div>
+
                     </div>
+                    <div class="imagem-resultado">
+                        <img src="./images/Logo-PlanoDeCorte.jpg" class="galeria w-50" alt="">
+                    </div>
+                        <p>Testamento: </p>
+                        <p>R$10000000.00</p>
             </div>
         </div>
     </div>
