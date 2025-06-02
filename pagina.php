@@ -12,28 +12,40 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="barra-lateral col-sm-3">
-                <div class="row">
-                    <div class="col">
-                        <a class="aba-materiais btn btn-link btn-block">Materiais</a>
+<body class="d-flex vh-100 overflow-hidden"> 
+    <div class="container-fluid p-0 h-100">
+        <div class="row flex-nowrap h-100">
+            <div class="col-auto col-md-3 col-xl-2 px-0 sidebar" id="side-nav">
+                <div class="text-center py-4">
+                   <img src="./images/Logo-PlanoDeCorteMini.jpg" class="galeria" alt="Logo Marcenaria" width="150">
+                </div>
+                <div class="text-center py-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fas fa-tools text-warning fs-1 me-2"></i>
+                        <span class="text-white fs-4 fw-bold">MARCENARIA<br>DO ZÉ</span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <a class="aba-planos btn btn-link btn-block">Planos</a>
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 h-100">
+                    <div class="w-100 py-2">
+                        <a class="aba-materiais btn btn-warning w-100 mb-2">Materiais</a>
+                    </div>
+                    <div class="w-100 py-2">
+                        <a class="aba-planos btn btn-warning w-100 mb-2">Planos</a>
+                    </div>
+                    <div class="w-100 py-2">
+                        <a class="aba-resultados btn btn-warning w-100 mb-2">Resultados</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <a class="aba-resultados btn btn-link btn-block">Resultados</a>
-                    </div>
-                </div>
+
             </div>
-            <div class="col-sm-9">
-                <div class="tela-materiais align-items-end row container">
+            <div class="col-sm-9 main">
+                <div class="tela-materiais align-items-end row container ">
+                <div class="text-center py-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fas fa-tools text-warning fs-1 me-2"></i>
+                        <span class="text-black fs-4 fw-bold">MATERIAIS</span>
+                    </div>
+                </div>
                     <div class="materiais col">
                         <div class="pl-2 campos-material row">
                             <div class="col">
@@ -54,6 +66,12 @@
                     </div>
                 </div>
                 <div style="display: none" class="tela-planos align-items-end row container">
+                    <div class="text-center py-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="fas fa-tools text-warning fs-1 me-2"></i>
+                            <span class="text-black fs-4 fw-bold">PLANOS</span>
+                        </div>
+                    </div>
                     <div class="campos col">
                         <div class="py-2 row">
                             <div class="col">
@@ -99,9 +117,13 @@
                     </div>
                 </div>
 
-                <divs style="display: none" class="tela-resultados row">
-                    <div class="col">aqui vai aparecer o resultado dos calculos, seja só um valor, ou até uma imagem</div>
-                </div>
+                <divs style="display: none" class="tela-resultados row container">
+                    <div class="text-center py-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="fas fa-tools text-warning fs-1 me-2"></i>
+                            <span class="text-black fs-4 fw-bold">PLANOS</span>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

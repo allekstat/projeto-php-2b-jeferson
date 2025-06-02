@@ -4,6 +4,7 @@ body {
 div.barra-lateral {
     background-color: #61191910;
 }
+
 div[class^='tela-'] > .col > .row {
     background-color: #00000010;
     padding-top: 1em;
@@ -12,10 +13,30 @@ div[class^='tela-'] > .col > .row {
     margin-bottom: 1em;
 }
 
+
+.main{
+    overflow-y: auto;
+}
+
+.sidebar {
+    background: 
+        url('./images/TexturaMadeiraEscura.jpg') repeat,
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+    background-size: 100% auto;
+    width: 250px; 
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar > div {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
 .galeria{
-    width: 20%;
-    max-width: 10%;
     margin: 0 auto;
     padding: 0.5em;
     border-radius: 0.5em;  
+    border-style:groove ;
+    border-color: burlywood;
 }
