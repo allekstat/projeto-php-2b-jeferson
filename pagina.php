@@ -108,6 +108,8 @@
                         </div>
                     </div>
                     <div class="pb-2 mb-3 d-flex col-sm-1">
+                        <a class = "enviar-campo btn btn-link">
+                            <i class="bi button bi-check-circle"></i>
                         <a class="adicionar-campo btn btn-link">
                             <i class="bi bi-plus-circle"></i>
                         </a>
