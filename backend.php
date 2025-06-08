@@ -1,15 +1,14 @@
 <?php
-ini_set('display_errors', '1');
 function conexao() : PDO | null
 {
     $host = 'localhost';
-    $dbname = 'loja_madeira';
+    $dbname = 'sistema_marcenaria';
     $username = 'root';
     $password = 'root';
     $dsn = "mysql:host=$host;dbname=$dbname";
     try
     {
-        $conexao = new PDO($dsn, $username, $password);
+        $conexao = new PDO($dsn, $username, $password, ['PDO::MYSQL_ATTR_FOUND_ROWS' => true]);
         $conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conexao;
     }
@@ -19,21 +18,30 @@ function conexao() : PDO | null
         return null;
     }
 }
-function retorno(array $dados)
+function retorno(int $codigo, string $mensagem, array $dados = [])
 {
+    $retorno = ['status' => $codigo, 'mensagem' => $mensagem];
+    if (count($dados) > 0)
+    {
+        $retorno['dados'] = $dados;
+        $retorno['quantidade'] = count($dados);
+    }
     header('Content-Type: application/json');
-    echo json_encode($dados);
-    exit();
+    http_response_code($codigo);
+    echo json_encode($retorno);
+    exit;
 }
-function select(array | string $campos = '*', string $tabela) : array
+function select(string | array $campos = '*', string  | array $tabelas, string | array $condicoes = '') : array
 {
-    if (is_array($campos)) $campos = implode(', ', $campos);
-    $sql = "SELECT $campos FROM $tabela";
+    if (is_array($campos)) $campos = implode(' , ', $campos);
+    if (is_array($tabelas)) $tabelas = implode(' JOIN ', $tabelas);
+    if (is_array($condicoes)) $condicoes = implode(' AND ', $condicoes);
+    $sql = "SELECT $campos FROM $tabelas";
+    if ($condicoes) $sql .= " WHERE $condicoes";
     $conexao = conexao();
     $busca = $conexao -> query($sql);
     $dados = $busca -> fetchAll(PDO::FETCH_ASSOC);
     $conexao = null;
-    header('Content-Type: application/json');
     return $dados;
 }
 function insert(string $tabela, string | array | null $campos, string | array $valores) : int | false
@@ -52,10 +60,10 @@ function insert(string $tabela, string | array | null $campos, string | array $v
     $sql = "INSERT INTO $tabela $campos VALUES ($valores)";
     $conexao = conexao();
     $estruturamento = $conexao -> prepare($sql);
-    $afetados = $estruturamento -> execute();
+    $estruturamento -> execute();
     $conexao = null;
     header('Content-Type: application/json');
-    return $afetados;
+    return $estruturamento -> rowCount();
 }
 function delete(string $tabela, string | array $condicoes) : int | false
 {
@@ -64,10 +72,10 @@ function delete(string $tabela, string | array $condicoes) : int | false
     $sql = "DELETE FROM $tabela WHERE $condicoes";
     $conexao = conexao();
     $estruturamento = $conexao -> prepare($sql);
-    $afetados = $estruturamento -> execute();
+    $estruturamento -> execute();
     $conexao = null;
     header('Content-Type: application/json');
-    return $afetados;
+    return $estruturamento -> rowCount();
 }
 function update(string $tabela, string | array $campos, string | array $valores, string | array $condicoes) : int | false
 {
@@ -87,8 +95,8 @@ function update(string $tabela, string | array $campos, string | array $valores,
     $sql = "UPDATE $tabela SET $sets WHERE $condicoes";
     $conexao = conexao();
     $estruturamento = $conexao -> prepare($sql);
-    $afetados = $estruturamento -> execute();
+    $estruturamento -> execute();
     $conexao = null;
     header('Content-Type: application/json');
-    return $afetados;
+    return $estruturamento -> rowCount();
 }

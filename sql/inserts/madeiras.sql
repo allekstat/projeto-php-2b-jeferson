@@ -1,0 +1,16 @@
+insert into madeiras (nome_madeira) values
+    ('Mogno'),
+    ('Itaúba'),
+    ('Carvalho'),
+    ('Cedro'),
+    ('Pinus'),
+    ('Cumaru'),
+    ('Eucalipto'),
+    ('Nogueira'),
+    ('Jequitibá'),
+    ('Ipê'),
+    ('Jacarandá'),
+    ('Jatobá'),
+    ('Pinho'),
+    ('MDF Branco'),
+    ('MDP Texturizado');

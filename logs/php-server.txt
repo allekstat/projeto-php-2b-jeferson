@@ -1,0 +1,390 @@
+[Sat Jun  7 23:59:23 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+[Sun Jun  8 00:05:27 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+[Sun Jun  8 00:05:32 2025] [::1]:42780 Accepted
+[Sun Jun  8 00:05:32 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:05:32 2025] [::1]:42780 [200]: GET /
+[Sun Jun  8 00:05:32 2025] [::1]:42780 Closing
+[Sun Jun  8 00:05:32 2025] [::1]:42792 Accepted
+[Sun Jun  8 00:05:32 2025] [::1]:42792 [200]: GET /estilos.css
+[Sun Jun  8 00:05:32 2025] [::1]:42792 Closing
+[Sun Jun  8 00:05:32 2025] [::1]:42804 Accepted
+[Sun Jun  8 00:05:32 2025] [::1]:42804 [200]: GET /codigos.js
+[Sun Jun  8 00:05:32 2025] [::1]:42804 Closing
+[Sun Jun  8 00:05:32 2025] [::1]:42814 Accepted
+[Sun Jun  8 00:05:32 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:05:32 2025] [::1]:42814 [200]: GET /
+[Sun Jun  8 00:05:32 2025] [::1]:42814 Closing
+[Sun Jun  8 00:05:32 2025] [::1]:42824 Accepted
+[Sun Jun  8 00:05:32 2025] [::1]:42824 [200]: GET /estilos.css
+[Sun Jun  8 00:05:32 2025] [::1]:42824 Closing
+[Sun Jun  8 00:05:32 2025] [::1]:42840 Accepted
+[Sun Jun  8 00:05:32 2025] [::1]:42840 [200]: GET /codigos.js
+[Sun Jun  8 00:05:32 2025] [::1]:42840 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42844 Accepted
+[Sun Jun  8 00:05:33 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:05:33 2025] [::1]:42844 [200]: GET /
+[Sun Jun  8 00:05:33 2025] [::1]:42844 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42848 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42848 [200]: GET /estilos.css
+[Sun Jun  8 00:05:33 2025] [::1]:42848 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42852 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42852 [200]: GET /codigos.js
+[Sun Jun  8 00:05:33 2025] [::1]:42852 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42864 Accepted
+[Sun Jun  8 00:05:33 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:05:33 2025] [::1]:42864 [200]: GET /
+[Sun Jun  8 00:05:33 2025] [::1]:42864 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42880 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42880 [200]: GET /estilos.css
+[Sun Jun  8 00:05:33 2025] [::1]:42880 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42884 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42884 [200]: GET /codigos.js
+[Sun Jun  8 00:05:33 2025] [::1]:42884 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42892 Accepted
+[Sun Jun  8 00:05:33 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:05:33 2025] [::1]:42892 [200]: GET /
+[Sun Jun  8 00:05:33 2025] [::1]:42892 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42896 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42896 [200]: GET /estilos.css
+[Sun Jun  8 00:05:33 2025] [::1]:42896 Closing
+[Sun Jun  8 00:05:33 2025] [::1]:42910 Accepted
+[Sun Jun  8 00:05:33 2025] [::1]:42910 [200]: GET /codigos.js
+[Sun Jun  8 00:05:33 2025] [::1]:42910 Closing
+[Sun Jun  8 00:06:21 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+[Sun Jun  8 00:06:51 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+[Sun Jun  8 00:07:03 2025] [::1]:42010 Accepted
+[Sun Jun  8 00:07:03 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:07:03 2025] [::1]:42010 [200]: GET /
+[Sun Jun  8 00:07:03 2025] [::1]:42010 Closing
+[Sun Jun  8 00:07:03 2025] [::1]:42012 Accepted
+[Sun Jun  8 00:07:03 2025] [::1]:42012 [200]: GET /estilos.css
+[Sun Jun  8 00:07:03 2025] [::1]:42012 Closing
+[Sun Jun  8 00:07:03 2025] [::1]:42024 Accepted
+[Sun Jun  8 00:07:03 2025] [::1]:42024 [200]: GET /codigos.js
+[Sun Jun  8 00:07:03 2025] [::1]:42024 Closing
+[Sun Jun  8 00:07:16 2025] Failed to listen on :::8080 (reason: Address already in use)
+[Sun Jun  8 00:07:27 2025] Failed to listen on :::8080 (reason: Address already in use)
+[Sun Jun  8 00:07:36 2025] [::1]:59768 Accepted
+[Sun Jun  8 00:07:36 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:07:36 2025] [::1]:59768 [200]: GET /
+[Sun Jun  8 00:07:36 2025] [::1]:59768 Closing
+[Sun Jun  8 00:07:36 2025] [::1]:59776 Accepted
+[Sun Jun  8 00:07:36 2025] [::1]:59776 [200]: GET /estilos.css
+[Sun Jun  8 00:07:36 2025] [::1]:59776 Closing
+[Sun Jun  8 00:07:36 2025] [::1]:59786 Accepted
+[Sun Jun  8 00:07:36 2025] [::1]:59786 [200]: GET /codigos.js
+[Sun Jun  8 00:07:36 2025] [::1]:59786 Closing
+[Sun Jun  8 00:07:36 2025] [::1]:59798 Accepted
+[Sun Jun  8 00:07:36 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:07:36 2025] [::1]:59798 [200]: GET /
+[Sun Jun  8 00:07:36 2025] [::1]:59798 Closing
+[Sun Jun  8 00:07:36 2025] [::1]:59806 Accepted
+[Sun Jun  8 00:07:36 2025] [::1]:59806 [200]: GET /estilos.css
+[Sun Jun  8 00:07:36 2025] [::1]:59806 Closing
+[Sun Jun  8 00:07:36 2025] [::1]:59820 Accepted
+[Sun Jun  8 00:07:36 2025] [::1]:59820 [200]: GET /codigos.js
+[Sun Jun  8 00:07:36 2025] [::1]:59820 Closing
+[Sun Jun  8 00:08:13 2025] [::1]:53322 Accepted
+[Sun Jun  8 00:08:13 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:08:13 2025] [::1]:53322 [200]: GET /
+[Sun Jun  8 00:08:13 2025] [::1]:53322 Closing
+[Sun Jun  8 00:08:13 2025] [::1]:53330 Accepted
+[Sun Jun  8 00:08:13 2025] [::1]:53330 [200]: GET /estilos.css
+[Sun Jun  8 00:08:13 2025] [::1]:53330 Closing
+[Sun Jun  8 00:08:13 2025] [::1]:53336 Accepted
+[Sun Jun  8 00:08:13 2025] [::1]:53336 [200]: GET /codigos.js
+[Sun Jun  8 00:08:13 2025] [::1]:53336 Closing
+[Sun Jun  8 00:08:14 2025] [::1]:53344 Accepted
+[Sun Jun  8 00:08:14 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:08:14 2025] [::1]:53344 [200]: GET /
+[Sun Jun  8 00:08:14 2025] [::1]:53344 Closing
+[Sun Jun  8 00:08:14 2025] [::1]:53356 Accepted
+[Sun Jun  8 00:08:14 2025] [::1]:53356 [200]: GET /estilos.css
+[Sun Jun  8 00:08:14 2025] [::1]:53356 Closing
+[Sun Jun  8 00:08:14 2025] [::1]:53358 Accepted
+[Sun Jun  8 00:08:14 2025] [::1]:53358 [200]: GET /codigos.js
+[Sun Jun  8 00:08:14 2025] [::1]:53358 Closing
+[Sun Jun  8 00:08:16 2025] [::1]:53370 Accepted
+[Sun Jun  8 00:08:16 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:08:16 2025] [::1]:53370 [200]: GET /
+[Sun Jun  8 00:08:16 2025] [::1]:53370 Closing
+[Sun Jun  8 00:08:16 2025] [::1]:53374 Accepted
+[Sun Jun  8 00:08:16 2025] [::1]:53374 [200]: GET /estilos.css
+[Sun Jun  8 00:08:16 2025] [::1]:53374 Closing
+[Sun Jun  8 00:08:16 2025] [::1]:53382 Accepted
+[Sun Jun  8 00:08:16 2025] [::1]:53382 [200]: GET /codigos.js
+[Sun Jun  8 00:08:16 2025] [::1]:53382 Closing
+[Sun Jun  8 00:08:17 2025] [::1]:53398 Accepted
+[Sun Jun  8 00:08:17 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 00:08:17 2025] [::1]:53398 [200]: GET /
+[Sun Jun  8 00:08:17 2025] [::1]:53398 Closing
+[Sun Jun  8 00:08:17 2025] [::1]:53402 Accepted
+[Sun Jun  8 00:08:17 2025] [::1]:53402 [200]: GET /estilos.css
+[Sun Jun  8 00:08:17 2025] [::1]:53402 Closing
+[Sun Jun  8 00:08:17 2025] [::1]:53406 Accepted
+[Sun Jun  8 00:08:17 2025] [::1]:53406 [200]: GET /codigos.js
+[Sun Jun  8 00:08:17 2025] [::1]:53406 Closing
+[Sun Jun  8 17:38:06 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+Gtk-Message: 17:38:06.457: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+[Sun Jun  8 17:38:06 2025] [::1]:51990 Accepted
+[Sun Jun  8 17:38:06 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:38:06 2025] [::1]:51990 [200]: GET /
+[Sun Jun  8 17:38:06 2025] [::1]:51990 Closing
+[Sun Jun  8 17:38:06 2025] [::1]:52006 Accepted
+[Sun Jun  8 17:38:06 2025] [::1]:52006 [200]: GET /estilos.css
+[Sun Jun  8 17:38:06 2025] [::1]:52006 Closing
+[Sun Jun  8 17:38:06 2025] [::1]:52010 Accepted
+[Sun Jun  8 17:38:06 2025] [::1]:52010 [200]: GET /codigos.js
+[Sun Jun  8 17:38:06 2025] [::1]:52010 Closing
+[Sun Jun  8 17:38:34 2025] [::1]:40474 Accepted
+[Sun Jun  8 17:38:34 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:38:34 2025] [::1]:40474 [200]: GET /
+[Sun Jun  8 17:38:34 2025] [::1]:40474 Closing
+[Sun Jun  8 17:38:34 2025] [::1]:40482 Accepted
+[Sun Jun  8 17:38:34 2025] [::1]:40482 [200]: GET /estilos.css
+[Sun Jun  8 17:38:34 2025] [::1]:40482 Closing
+[Sun Jun  8 17:38:34 2025] [::1]:40498 Accepted
+[Sun Jun  8 17:38:34 2025] [::1]:40498 [200]: GET /codigos.js
+[Sun Jun  8 17:38:34 2025] [::1]:40498 Closing
+[Sun Jun  8 17:38:38 2025] [::1]:40504 Accepted
+[Sun Jun  8 17:38:38 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:38:38 2025] [::1]:40504 [200]: GET /
+[Sun Jun  8 17:38:38 2025] [::1]:40504 Closing
+[Sun Jun  8 17:38:38 2025] [::1]:40516 Accepted
+[Sun Jun  8 17:38:38 2025] [::1]:40516 [200]: GET /estilos.css
+[Sun Jun  8 17:38:38 2025] [::1]:40516 Closing
+[Sun Jun  8 17:38:38 2025] [::1]:40532 Accepted
+[Sun Jun  8 17:38:38 2025] [::1]:40532 [200]: GET /codigos.js
+[Sun Jun  8 17:38:38 2025] [::1]:40532 Closing
+[Sun Jun  8 17:38:39 2025] [::1]:40534 Accepted
+[Sun Jun  8 17:38:39 2025] [::1]:40534 [200]: GET /imagens/Logo-PlanoDeCorteMini.ico
+[Sun Jun  8 17:38:39 2025] [::1]:40534 Closing
+[Sun Jun  8 17:38:39 2025] [::1]:40540 Accepted
+[Sun Jun  8 17:38:39 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:38:39 2025] [::1]:40540 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:38:39 2025] [::1]:40540 Closing
+[Sun Jun  8 17:38:41 2025] [::1]:40552 Accepted
+[Sun Jun  8 17:38:41 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:38:41 2025] [::1]:40552 [200]: GET /
+[Sun Jun  8 17:38:41 2025] [::1]:40552 Closing
+[Sun Jun  8 17:38:41 2025] [::1]:40564 Accepted
+[Sun Jun  8 17:38:41 2025] [::1]:40564 [200]: GET /estilos.css
+[Sun Jun  8 17:38:41 2025] [::1]:40564 Closing
+[Sun Jun  8 17:38:41 2025] [::1]:40570 Accepted
+[Sun Jun  8 17:38:41 2025] [::1]:40570 [200]: GET /codigos.js
+[Sun Jun  8 17:38:41 2025] [::1]:40570 Closing
+[Sun Jun  8 17:38:41 2025] [::1]:40584 Accepted
+[Sun Jun  8 17:38:41 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:38:41 2025] [::1]:40584 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:38:41 2025] [::1]:40584 Closing
+[Sun Jun  8 17:39:03 2025] [::1]:42314 Accepted
+[Sun Jun  8 17:39:03 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:39:03 2025] [::1]:42314 [200]: GET /
+[Sun Jun  8 17:39:03 2025] [::1]:42314 Closing
+[Sun Jun  8 17:39:03 2025] [::1]:42316 Accepted
+[Sun Jun  8 17:39:03 2025] [::1]:42316 [200]: GET /estilos.css
+[Sun Jun  8 17:39:03 2025] [::1]:42316 Closing
+[Sun Jun  8 17:39:03 2025] [::1]:42328 Accepted
+[Sun Jun  8 17:39:03 2025] [::1]:42328 [200]: GET /codigos.js
+[Sun Jun  8 17:39:03 2025] [::1]:42328 Closing
+[Sun Jun  8 17:39:03 2025] [::1]:42336 Accepted
+[Sun Jun  8 17:39:03 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:03 2025] [::1]:42336 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:03 2025] [::1]:42336 Closing
+[Sun Jun  8 17:39:07 2025] [::1]:42342 Accepted
+[Sun Jun  8 17:39:07 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:39:07 2025] [::1]:42342 [200]: GET /
+[Sun Jun  8 17:39:07 2025] [::1]:42342 Closing
+[Sun Jun  8 17:39:07 2025] [::1]:42350 Accepted
+[Sun Jun  8 17:39:07 2025] [::1]:42350 [200]: GET /estilos.css
+[Sun Jun  8 17:39:07 2025] [::1]:42350 Closing
+[Sun Jun  8 17:39:07 2025] [::1]:42354 Accepted
+[Sun Jun  8 17:39:07 2025] [::1]:42354 [200]: GET /codigos.js
+[Sun Jun  8 17:39:07 2025] [::1]:42354 Closing
+[Sun Jun  8 17:39:21 2025] [::1]:49724 Accepted
+[Sun Jun  8 17:39:21 2025] [::1]:49724 [200]: GET /imagens/Logo-PlanoDeCorteMini.ico
+[Sun Jun  8 17:39:21 2025] [::1]:49724 Closing
+[Sun Jun  8 17:39:22 2025] [::1]:49736 Accepted
+[Sun Jun  8 17:39:22 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:22 2025] [::1]:49736 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:22 2025] [::1]:49736 Closing
+[Sun Jun  8 17:39:27 2025] [::1]:47346 Accepted
+[Sun Jun  8 17:39:27 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:39:27 2025] [::1]:47346 [200]: GET /
+[Sun Jun  8 17:39:27 2025] [::1]:47346 Closing
+[Sun Jun  8 17:39:27 2025] [::1]:47354 Accepted
+[Sun Jun  8 17:39:27 2025] [::1]:47354 [200]: GET /estilos.css
+[Sun Jun  8 17:39:27 2025] [::1]:47354 Closing
+[Sun Jun  8 17:39:27 2025] [::1]:47360 Accepted
+[Sun Jun  8 17:39:27 2025] [::1]:47360 [200]: GET /codigos.js
+[Sun Jun  8 17:39:27 2025] [::1]:47360 Closing
+[Sun Jun  8 17:39:27 2025] [::1]:47362 Accepted
+[Sun Jun  8 17:39:27 2025] [::1]:47362 [200]: GET /imagens/Logo-PlanoDeCorteMini.ico
+[Sun Jun  8 17:39:27 2025] [::1]:47362 Closing
+[Sun Jun  8 17:39:27 2025] [::1]:47378 Accepted
+[Sun Jun  8 17:39:27 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:27 2025] [::1]:47378 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:27 2025] [::1]:47378 Closing
+[Sun Jun  8 17:39:32 2025] [::1]:47380 Accepted
+[Sun Jun  8 17:39:32 2025] PHP Warning:  Undefined array key "usuario_logado" in /home/nauta/projetos/php/projeto-php-2b-jeferson/index.php on line 6
+[Sun Jun  8 17:39:32 2025] [::1]:47380 [200]: GET /
+[Sun Jun  8 17:39:32 2025] [::1]:47380 Closing
+[Sun Jun  8 17:39:32 2025] [::1]:47390 Accepted
+[Sun Jun  8 17:39:32 2025] [::1]:47390 [200]: GET /estilos.css
+[Sun Jun  8 17:39:32 2025] [::1]:47390 Closing
+[Sun Jun  8 17:39:32 2025] [::1]:47400 Accepted
+[Sun Jun  8 17:39:32 2025] [::1]:47400 [200]: GET /codigos.js
+[Sun Jun  8 17:39:32 2025] [::1]:47400 Closing
+[Sun Jun  8 17:39:32 2025] [::1]:47412 Accepted
+[Sun Jun  8 17:39:32 2025] [::1]:47412 [200]: GET /imagens/Logo-PlanoDeCorteMini.ico
+[Sun Jun  8 17:39:32 2025] [::1]:47412 Closing
+[Sun Jun  8 17:39:32 2025] [::1]:47426 Accepted
+[Sun Jun  8 17:39:32 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:32 2025] [::1]:47426 [500]: GET /api/usuarios/123?nome=alexsander - Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome_usuario' in 'field list' in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:43
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(43): PDO->query()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(19): select()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(9): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 43
+[Sun Jun  8 17:39:32 2025] [::1]:47426 Closing
+[Sun Jun  8 17:47:41 2025] [::1]:49564 Accepted
+[Sun Jun  8 17:47:41 2025] [::1]:49564 [200]: DELETE /api/usuarios/1
+[Sun Jun  8 17:47:41 2025] [::1]:49564 Closing
+[Sun Jun  8 17:48:22 2025] [::1]:35242 Accepted
+[Sun Jun  8 17:48:22 2025] [::1]:35242 [400]: DELETE /api/usuarios/1
+[Sun Jun  8 17:48:22 2025] [::1]:35242 Closing
+[Sun Jun  8 17:48:46 2025] [::1]:45694 Accepted
+[Sun Jun  8 17:48:46 2025] [::1]:45694 [400]: DELETE /api/usuarios/2
+[Sun Jun  8 17:48:46 2025] [::1]:45694 Closing
+[Sun Jun  8 17:48:48 2025] [::1]:45708 Accepted
+[Sun Jun  8 17:48:53 2025] [::1]:45708 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Jun  8 17:48:53 2025] [::1]:45708 Closing
+[Sun Jun  8 17:48:53 2025] [::1]:50884 Accepted
+[Sun Jun  8 17:48:53 2025] [::1]:50884 [400]: DELETE /api/usuarios/3
+[Sun Jun  8 17:48:53 2025] [::1]:50884 Closing
+[Sun Jun  8 17:48:55 2025] [::1]:50900 Accepted
+[Sun Jun  8 17:49:00 2025] [::1]:50900 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Jun  8 17:49:00 2025] [::1]:50900 Closing
+[Sun Jun  8 17:49:25 2025] [::1]:56038 Accepted
+[Sun Jun  8 17:49:25 2025] [::1]:56038 [200]: DELETE /api/usuarios/17
+[Sun Jun  8 17:49:25 2025] [::1]:56038 Closing
+[Sun Jun  8 17:58:18 2025] [::1]:54058 Accepted
+[Sun Jun  8 17:58:18 2025] PHP Warning:  Undefined array key 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php on line 9
+[Sun Jun  8 17:58:18 2025] [::1]:54058 [400]: DELETE /api/usuarios
+[Sun Jun  8 17:58:18 2025] [::1]:54058 Closing
+[Sun Jun  8 17:58:48 2025] [::1]:35630 Accepted
+[Sun Jun  8 17:58:48 2025] PHP Warning:  Undefined array key 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php on line 9
+[Sun Jun  8 17:58:48 2025] [::1]:35630 [400]: DELETE /api/usuarios
+[Sun Jun  8 17:58:48 2025] [::1]:35630 Closing
+[Sun Jun  8 17:59:19 2025] [::1]:56722 Accepted
+[Sun Jun  8 17:59:24 2025] [::1]:56722 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Jun  8 17:59:24 2025] [::1]:56722 Closing
+[Sun Jun  8 17:59:26 2025] [::1]:51496 Accepted
+[Sun Jun  8 17:59:26 2025] PHP Warning:  Undefined array key 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php on line 8
+[Sun Jun  8 17:59:26 2025] [::1]:51496 [400]: DELETE /api/usuarios
+[Sun Jun  8 17:59:26 2025] [::1]:51496 Closing
+[Sun Jun  8 17:59:56 2025] [::1]:56700 Accepted
+[Sun Jun  8 17:59:56 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:75
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(75): PDOStatement->execute()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(25): delete()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(8): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 75
+[Sun Jun  8 17:59:56 2025] [::1]:56700 [500]: DELETE /api/usuarios/ - Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:75
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(75): PDOStatement->execute()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(25): delete()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(8): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 75
+[Sun Jun  8 17:59:56 2025] [::1]:56700 Closing
+[Sun Jun  8 18:01:47 2025] [::1]:43032 Accepted
+[Sun Jun  8 18:01:47 2025] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:75
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(75): PDOStatement->execute()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(25): delete()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(8): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 75
+[Sun Jun  8 18:01:47 2025] [::1]:43032 [500]: DELETE /api/usuarios/ - Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php:75
+Stack trace:
+#0 /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php(75): PDOStatement->execute()
+#1 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(25): delete()
+#2 /home/nauta/projetos/php/projeto-php-2b-jeferson/api/index.php(8): api_usuarios()
+#3 {main}
+  thrown in /home/nauta/projetos/php/projeto-php-2b-jeferson/backend.php on line 75
+[Sun Jun  8 18:01:47 2025] [::1]:43032 Closing
+[Sun Jun  8 18:03:31 2025] [::1]:54914 Accepted
+[Sun Jun  8 18:03:31 2025] [::1]:54914 [400]: DELETE /api/usuarios/
+[Sun Jun  8 18:03:31 2025] [::1]:54914 Closing
+[Sun Jun  8 18:03:45 2025] [::1]:36772 Accepted
+[Sun Jun  8 18:03:45 2025] [::1]:36772 [400]: DELETE /api//usuarios/
+[Sun Jun  8 18:03:45 2025] [::1]:36772 Closing
