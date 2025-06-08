@@ -1,0 +1,55 @@
+        Tipos de madeiras em m³ 
+ 
+1	 MognoR R$/m³	8.818,13 R$/1000m³ R$ 8,82
+2	 Itaúba	        5.919,66	   R$ 5,92
+3	 Carvalho	    5.973,30	   R$ 5,97
+4	 Cedro	        12.127,88	   R$ 12,13
+5	 Pinus	        2.818,56	   R$ 2,82
+6	 Cumaru   	    6.728,59	   R$ 6,73
+7	 Eucalipto	    2.239,61	   R$ 2,24
+8	 Nogueira	    5.372,02	   R$ 5,37
+9	 Jequitibá	    5.973,30	   R$ 5,97
+10	 Ipê	        6.209,08	   R$ 6,21
+11	 Jacarandá	    4.743,74	   R$ 4,74
+12	 Jatobá	        5.973,30	   R$ 5,97
+13	 Pinho	        3.728,17	   R$ 3,73
+14	 MDF Branco	    3.142,93	   R$ 3,14
+15	 MDP Texturizado 3.258,89	   R$ 3,26
+
+
+
+#	Madeira	        Marcenaria (R$/m³)	Preço por mm³ (R$)
+
+1	Mogno	        R$ 900,00	        R$ 0,0000009'          
+2	Itaúba	        R$ 550,00	        R$ 0,00000055
+3	Carvalho	R$ 600,00	        R$ 0,0000006
+4	Cedro	        R$ 1.000,00	        R$ 0,000001
+5	Pinus	        R$ 250,00	        R$ 0,00000025
+6	Cumaru	        R$ 700,00	        R$ 0,0000007
+7	Eucalipto	R$ 200,00	        R$ 0,0000002
+8	Nogueira	R$ 500,00	        R$ 0,0000005
+9	Jequitibá	R$ 600,00	        R$ 0,0000006
+10	Ipê	        R$ 750,00	        R$ 0,00000075
+11	Jacarandá	R$ 450,00	        R$ 0,00000045
+12	Jatobá	        R$ 600,00	        R$ 0,0000006
+13	Pinho	        R$ 350,00	        R$ 0,00000035
+14	MDF Branco	R$ 180,00	        R$ 0,00000018
+15	MDP Texturizado	R$ 200,00	        R$ 0,0000002
+
+
+Preço/1000mm (R$)
+R$ 3,38
+R$ 2,06
+R$ 2,25
+R$ 3,75
+R$ 0,75
+R$ 2,63
+R$ 0,60
+R$ 1,88
+R$ 2,25
+R$ 2,81
+R$ 1,69
+R$ 2,25
+R$ 1,05
+R$ 1,94
+R$ 2,16
