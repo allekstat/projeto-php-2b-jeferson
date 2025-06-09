@@ -9,7 +9,7 @@
                     <div class='d-flex justify-content-center align-items-center'>
                         <i class='fas fa-tools text-warning fs-1 me-2'></i>
                         <span class='text-white fs-4 fw-bold'>MARCENARIA<br>DO ZÉ</span>
-                    </div>
+                    </div> 
                 </div>
                     <div class='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 h-100'>
                     <div class='w-100 py-2'>
@@ -121,3 +121,6 @@
         </div>
     </div>
 </div>
+
+
+
