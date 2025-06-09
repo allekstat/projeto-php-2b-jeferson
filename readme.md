@@ -30,4 +30,4 @@ E por fim indo na aba Resultados, terá os planos disponíveis, escolhendo o pla
 
 ## Licença
 
-MIT
+-MIT

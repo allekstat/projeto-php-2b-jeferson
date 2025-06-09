@@ -3,12 +3,12 @@
         <div class='row flex-nowrap h-100'>
             <div class='col-auto col-md-3 col-xl-2 px-0 sidebar' id='side-nav'>
                 <div class='text-center py-4'>
-                    <img src='./images/Logo-PlanoDeCorteMini.jpg' class='galeria' alt='Logo Marcenaria' width='150'>
+                    <img src='./images/carvalhoAmendoa.jpg' class='galeria' alt='Logo Marcenaria' width='300  '>
                 </div>
                 <div class='text-center py-3'>
                     <div class='d-flex justify-content-center align-items-center'>
                         <i class='fas fa-tools text-warning fs-1 me-2'></i>
-                        <span class='text-white fs-4 fw-bold'>MARCENARIA<br>DO ZÉ</span>
+                        <span class='text-white fs-4 fw-bold'>MARCENARIA</span>
                     </div> 
                 </div>
                     <div class='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 h-100'>
@@ -41,6 +41,48 @@
                             </div>
                             <div class='col'>
                                 <input type='text' placeholder='Quantidade' id='quantidade-material' class='form-control'>
+                            </div>
+                            <div class='col'>
+                                <label for="">Largura da Chapa</label>
+                                <select name="largura-chapa" id="largura-material" class="form-control">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class='col'>
+                                <label for="">Comprimento da Chapa</label>
+                                <select name="Comprimento-chapa" id="comprimento-material" class="form-control">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class='col'>
+                                <label for="">Espessura da Chapa</label>
+                                <select name="largura-chapa" id="largura-material" class="form-control">
+                                    <option value="">3</option>
+                                    <option value="">6</option>
+                                    <option value="">9</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -112,6 +154,9 @@
                     </div>
                     <div class='imagem-resultado'>
                         <img src='./images/Logo-PlanoDeCorte.jpg' class='galeria w-50' alt=''>
+                    </div>
+                    <div class='valor-resultado'>
+                        
                     </div>
                     <p>Testamento: </p>
                     <p>R$10000000.00</p>
