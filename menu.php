@@ -44,45 +44,15 @@
                             </div>
                             <div class='col'>
                                 <label for="">Largura da Chapa</label>
-                                <select name="largura-chapa" id="largura-material" class="form-control">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <input type='number' placeholder="Largura" name="largura-chapa" id="largura-material" class="form-control">
                             </div>
                             <div class='col'>
                                 <label for="">Comprimento da Chapa</label>
-                                <select name="Comprimento-chapa" id="comprimento-material" class="form-control">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <input type='number' placeholder="Comprimento" name="comprimento-chapa" id="comprimento-material" class="form-control">
                             </div>
                             <div class='col'>
                                 <label for="">Espessura da Chapa</label>
-                                <select name="largura-chapa" id="largura-material" class="form-control">
-                                    <option value="">3</option>
-                                    <option value="">6</option>
-                                    <option value="">9</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <input type='number' placeholder="Espessura" name="espessura-chapa" id="espessura-material" class="form-control">
                             </div>
                         </div>
                     </div>
