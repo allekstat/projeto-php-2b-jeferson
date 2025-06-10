@@ -134,9 +134,18 @@ function adicionar_material()
             <div class='col'>
                 <span class='material-quantidade'>${$('#quantidade-material').val()}</span>
             </div>
+            <div class='col'>
+                <span class='material-largura'>${$('#largura-material')}</span>
+            </div>
+            <div class='col'>
+                <span class='material-comprimento'>${$('#comprimento-material')}</span>
+            </div>
+            <div class='col'>
+                <span class='espessura-largura'>${$('#espessura-material')}</span>
+            </div>
         </div>
     `);
-    chamarapi('POST', 'api.php', {tabela: 'materiais', campos: ['nome', 'preco', 'quantidade'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val() ]})
+    chamarapi('POST', 'api.php', {tabela: 'chapas', campos: ['nome_chapa', 'valor_chapa', 'quantidade_chapa', 'largura_chapa', 'altura_chapa', 'espessura_chapa'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()  ]})
     .then( () => buscar_materiais());
 }
 function remover_material()
@@ -172,3 +181,17 @@ document.querySelectorAll('.btn').forEach(button => {
         this.classList.add('active');
     });
 });
+
+function precoEstimado(){
+    precoEstimado = chamarapi('GET', 'calculo.php', {resultados});
+    console.log(precoEstimado);
+    
+    $('div-resultado.valor-resultado')
+    .append(`
+            <span>${precoEstimado}</span>
+        
+        
+        `)
+
+
+}

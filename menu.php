@@ -3,7 +3,7 @@
         <div class='row flex-nowrap h-100'>
             <div class='col-auto col-md-3 col-xl-2 px-0 sidebar' id='side-nav'>
                 <div class='text-center py-4'>
-                    <img src='./images/carvalhoAmendoa.jpg' class='galeria' alt='Logo Marcenaria' width='300  '>
+                    <img src='./images/Logo-PlanoDeCorteMini.jpg' class='galeria' alt='Logo Marcenaria' width='300  '>
                 </div>
                 <div class='text-center py-3'>
                     <div class='d-flex justify-content-center align-items-center'>
@@ -47,7 +47,7 @@
                                 <input type='number' placeholder="Largura" name="largura-chapa" id="largura-material" class="form-control">
                             </div>
                             <div class='col'>
-                                <label for="">Comprimento da Chapa</label>
+                                <label for="">Comprimento</label>
                                 <input type='number' placeholder="Comprimento" name="comprimento-chapa" id="comprimento-material" class="form-control">
                             </div>
                             <div class='col'>

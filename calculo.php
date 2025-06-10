@@ -1,4 +1,4 @@
-<?php require_once 'backend.php', 'api.php';
+<?php require_once 'backend.php';
 
 
 
@@ -32,6 +32,7 @@ function calcularPrecoEstimado($codChapa, $codPeca, $quantidade) {
     $custoTotal = $volumePecas * $precoPorMM3;
 
     return round($custoTotal, 2);
+    
 }
 
 
