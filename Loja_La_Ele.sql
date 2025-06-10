@@ -2,6 +2,13 @@ DROP DATABASE IF EXISTS Loja_Madeira;
 CREATE DATABASE Loja_Madeira;
 USE Loja_Madeira;
 
+create table usuarios
+(
+    id_usuario int unsigned not null auto_increment,
+    login_usuario varchar(30) not null unique,
+    senha_usuario char(40) not null,
+    primary key (id_usuario)
+);
 CREATE TABLE Estado (
     Sigla_Est CHAR(2) NOT NULL PRIMARY KEY,
     Nome_Est VARCHAR(50) NOT NULL UNIQUE

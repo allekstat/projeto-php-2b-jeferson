@@ -20,7 +20,7 @@ div[class^='tela-'] > .col > .row {
 
 .sidebar {
     background: 
-        url('./images/TexturaMadeiraEscura.jpg') repeat,
+        url('./imagens/TexturaMadeiraEscura.jpg') repeat,
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
     background-size: 100% auto;
     width: 250px; 

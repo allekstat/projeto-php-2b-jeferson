@@ -22,7 +22,7 @@ margem de lucro
 
 ## Uso
 
-Assim que logar poderá ir na aba de Materiais, aonde irá cadastrar as chapas do sistema:Nome, Tamanho, Preços e Quantidade.
+Assim que logar poderá ir na aba de Materiais, aonde irá cadastrar as chapas do sistema: Nome, Tamanho, Preços e Quantidade.
 
 Assim passando para a aba Planos, aonde poderá escolher o material cadastrado e o tamanho necessário para a peça.
 

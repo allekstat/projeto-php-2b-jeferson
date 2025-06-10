@@ -7,12 +7,30 @@ switch ($caminho_rota[0])
     case 'usuarios':
         api_usuarios($caminho_rota[1]);
         break;
-    case 'materiais':
+    case 'login':
+        api_login();
+        break;
+    case 'cadastro':
+        api_cadastro();
+        break;
+    case 'redirecionar':
+        api_redirecionar($caminho_rota[1]);
+        break;
+    case 'logoff':
+        session_start();
+        session_destroy();
+        retorno(200, 'ok');
+        break;
+    case 'dados':
+        api_dados();
+        break;
+    default:
+        retorno(404, 'rota nao encontrada');
         break;
 }
 function api_usuarios($id)
 {
-    if ($id == '') $id = null;
+    if (!isset($id) || $id == '') $id = null;
     switch ($_SERVER['REQUEST_METHOD'])
     {
         case 'GET':
@@ -29,4 +47,53 @@ function api_usuarios($id)
             retorno($codigo, $mensagem, ['removidos' => $afetados]);
             break;
     }
+}
+function api_login()
+{
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') retorno(405, 'post obrigatório');
+    if (!isset($_POST['usuario']) || !isset($_POST['senha'])) retorno(400, 'usuario e senha requeridos');
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+    $usuarios = select('nome_usuario', 'usuarios', "login_usuario = '$usuario' AND senha_usuario = '$senha'");
+    if (count($usuarios) > 0)
+    {
+        session_start();
+        $_SESSION['usuario_logado'] = true;
+        $_SESSION['dados_usuario'] = $usuario;
+        retorno(200, 'ok');
+    }
+    else retorno(401, 'usuario ou senha invalidos');
+}
+function api_cadastro()
+{
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') retorno(405, 'post obrigatório');
+    if (!isset($_POST['usuario']) || !isset($_POST['senha'])) retorno(400, 'usuario e senha requeridos');
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+    try { $usuarios = insert('usuarios', ['login_usuario', 'senha_usuario'], [$usuario, $senha]); }
+    catch (PDOException $e)
+    {
+        if ($e -> getCode() == 23000) retorno(409, 'usuario ja cadastrado');
+        retorno(500, 'erro ao criar usuario', [$e -> getMessage()]);
+    }
+    if ($usuarios > 0)
+    {
+        session_start();
+        $_SESSION['usuario_logado'] = true;
+        $_SESSION['dados_usuario'] = $usuario;
+        retorno(201, 'usuario criado');
+    }
+}
+function api_redirecionar($pagina_alvo)
+{
+    if ($_SERVER['REQUEST_METHOD'] != 'GET') retorno(405, 'get obrigatório');
+    if (!isset($pagina_alvo) || $pagina_alvo == '') retorno(400, 'pagina requerida');
+    session_start();
+    $_SESSION['pagina'] = $pagina_alvo;
+    retorno(200, 'ok');
+}
+function api_dados()
+{
+    session_start();
+    retorno(200, 'ok', ['nome' => $_SESSION['dados_usuario']]);
 }

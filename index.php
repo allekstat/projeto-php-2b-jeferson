@@ -1,12 +1,17 @@
 <?php
-if (session_start() === false)
+if (session_start() == false)
 {
     exit;
 }
-if ($_SESSION['usuario_logado'] === true)
+if ($_SESSION['usuario_logado'] == true)
 {
     $pagina = 'menu';
     $titulo = 'Sistema de Cálculo de Custos - Marcenaria';
+}
+else if ($_SESSION['pagina'] == 'cadastro')
+{
+    $pagina = 'cadastro';
+    $titulo = 'Cadastro :: Sistema de Cálculo de Custos - Marcenaria';
 }
 else
 {
