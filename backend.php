@@ -1,11 +1,7 @@
 <?php
 function conexao() : PDO | null
 {
-    $host = 'localhost';
-    $dbname = 'sistema_marcenaria';
-    $username = 'root';
-    $password = 'root';
-    $dsn = "mysql:host=$host;dbname=$dbname";
+    include 'database.php';
     try
     {
         $conexao = new PDO($dsn, $username, $password, ['PDO::MYSQL_ATTR_FOUND_ROWS' => true]);

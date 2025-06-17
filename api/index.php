@@ -1,5 +1,6 @@
 <?php require_once '../backend.php';
 $rota = $_SERVER['PATH_INFO'];
+ini_set('display_errors', 0);
 $caminho_rota = explode('/', $rota);
 array_shift($caminho_rota);
 switch ($caminho_rota[0])
@@ -23,6 +24,9 @@ switch ($caminho_rota[0])
         break;
     case 'dados':
         api_dados();
+        break;
+    case 'pecas':
+        api_pecas($caminho_rota[1]);
         break;
     default:
         retorno(404, 'rota nao encontrada');
@@ -60,6 +64,8 @@ function api_login()
         session_start();
         $_SESSION['usuario_logado'] = true;
         $_SESSION['dados_usuario'] = $usuario;
+        $id_usuario = select('id_usuario', 'usuarios', ["login_usuario = '$usuario'", "senha_usuario = '$senha'"])[0]['id_usuario'];
+        $_SESSION['id_usuario'] = $id_usuario;
         retorno(200, 'ok');
     }
     else retorno(401, 'usuario ou senha invalidos');
@@ -81,6 +87,8 @@ function api_cadastro()
         session_start();
         $_SESSION['usuario_logado'] = true;
         $_SESSION['dados_usuario'] = $usuario;
+        $id_usuario = select('id_usuario', 'usuarios', ["login_usuario = '$usuario'", "senha_usuario = '$senha'"])[0]['id_usuario'];
+        $_SESSION['id_usuario'] = $id_usuario;
         retorno(201, 'usuario criado');
     }
 }
@@ -95,5 +103,34 @@ function api_redirecionar($pagina_alvo)
 function api_dados()
 {
     session_start();
-    retorno(200, 'ok', ['nome' => $_SESSION['dados_usuario']]);
+    retorno(200, 'ok', ['nome' => isset($_SESSION['dados_usuario']) ? $_SESSION['dados_usuario'] : '']);
+}
+function api_pecas($id)
+{
+    if (!isset($id) || $id == '') $id = null;
+    switch ($_SERVER['REQUEST_METHOD'])
+    {
+        case 'GET':
+            session_start();
+            $pecas = select(['*'], 'Peca', [is_null($id) ? 'usuario_criacao = ' . $_SESSION['id_usuario'] : "Cod_Peca = $id"]);
+            $codigo = count($pecas) > 0 ? 200 : 400;
+            $mensagem = count($pecas) > 0 ? 'ok.' : 'nenhum resultado.';
+            retorno($codigo, $mensagem, $pecas);
+            break;
+        case 'DELETE':
+            if (is_null($id)) retorno(400, 'proibido apagar todos');
+            $afetados = delete('Peca', "Cod_Peca = $id");
+            $codigo = $afetados > 0 ? 200 : 400;
+            $mensagem = $afetados > 0 ? 'ok.' : 'nenhum resultado.';
+            retorno($codigo, $mensagem, ['removidos' => $afetados]);
+            break;
+        case 'POST':
+            if (!is_null($id)) retorno(400, 'proibido sobrescrever');
+            session_start();
+            $afetados = insert('Peca', [...$_POST['campos'], 'usuario_criacao'], [...$_POST['valores'], $_SESSION['id_usuario']]);
+            $codigo = $afetados > 0 ? 200 : 400;
+            $mensagem = $afetados > 0 ? 'peca criada.' : 'nao criado.';
+            retorno($codigo, $mensagem, ['criados' => $afetados]);
+            break;
+    }
 }

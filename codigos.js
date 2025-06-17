@@ -36,16 +36,21 @@ function mudar_tela({ data: tela })
 }
 async function listar_materiais()
 {
-    const materiais = await $.get('materiais.php');
-    $('.materiais.col').empty();
-    for (let i = 0; i < materiais.length; i++)
+    api({rota: 'materiais'})
+    .then(retorno =>
     {
-        $('.materiais.col').append(`
-            <div class='py-2 row'>
-                <div class='col'>${materiais[i].nome}</div>
-            </div>
-        `);
-    }
+        $('.materiais.col').empty();
+        for (let i = 0; i < retorno.quantidade; i++)
+        {
+            const material = retorno.dados[i];
+            $('.materiais.col').append(`
+                <div class='py-2 row'>
+                    <div class='col'>${material.nome}</div>
+                </div>
+            `);
+        }
+    });
+    
 }
 function adicionar_campo()
 {
@@ -98,19 +103,19 @@ function remover_campo()
 function buscar_materiais()
 {
     $('.campos-material').prevAll().remove();
-    api({rota: 'materiais'})
+    api({rota: 'pecas'})
     .then(retorno => retorno.dados.forEach(v => 
         {
             $('.campos-material').before(`
-                <div data-material='${v.id}' class='py-2 align-items-center row'>
+                <div data-material='${v.Cod_Peca}' class='py-2 align-items-center row'>
                     <div class='col'>
-                        <span class='material-nome'>${v.nome}</span>
+                        <span class='material-nome'>${v.Nome_Peca}</span>
                     </div>
                     <div class='col'>
-                    <span class='material-preco'>${v.preco}</span>
+                    <span class='material-preco'>${v.Valor_Unitario}</span>
                     </div>
                     <div class='col'>
-                        <span class='material-quantidade'>${v.quantidade}</span>
+                        <span class='material-quantidade'>${v.Quantidade}</span>
                     </div>
                     <div class="col-sm-1">
                         <a class="apagar-material btn btn-link text-danger">
@@ -125,6 +130,12 @@ function buscar_materiais()
 }
 function adicionar_material()
 {
+    if (!($('#nome-material').val().trim() &&
+        $('#preco-material').val().trim() &&
+        $('#quantidade-material').val().trim() &&
+        $('#largura-material').val().trim() &&
+        $('#comprimento-material').val().trim() &&
+        $('#espessura-material').val().trim())) return alert('digite os dados corretamente');
     $('.campos-material').before(`
         <div class='py-2 row'>
             <div class='col'>
@@ -137,22 +148,23 @@ function adicionar_material()
                 <span class='material-quantidade'>${$('#quantidade-material').val()}</span>
             </div>
             <div class='col'>
-                <span class='material-largura'>${$('#largura-material')}</span>
+                <span class='material-largura'>${$('#largura-material').val()}</span>
             </div>
             <div class='col'>
-                <span class='material-comprimento'>${$('#comprimento-material')}</span>
+                <span class='material-comprimento'>${$('#comprimento-material').val()}</span>
             </div>
             <div class='col'>
-                <span class='espessura-largura'>${$('#espessura-material')}</span>
+                <span class='espessura-largura'>${$('#espessura-material').val()}</span>
             </div>
         </div>
     `);
-    api({metodo: 'POST', rota: 'chapas', dados: {campos: ['nome_chapa', 'valor_chapa', 'quantidade_chapa', 'largura_chapa', 'altura_chapa', 'espessura_chapa'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()]}})
+    api({metodo: 'POST', rota: 'pecas', dados: {campos: ['Nome_Peca', 'Valor_Unitario', 'Quantidade', 'Largura_MM', 'Altura_MM', 'Espessura_MM'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()]}})
     .then( () => buscar_materiais());
 }
 function remover_material()
 {
-    api({metodo: 'DELETE', rota: 'materiais/' + $(this).parent().parent().data('material')})
+    console.log($(this));
+    api({metodo: 'DELETE', rota: 'pecas/' + $(this).parent().parent().data('material')})
     .then(() => buscar_materiais());
 }
 document.querySelectorAll('.button').forEach(button => {

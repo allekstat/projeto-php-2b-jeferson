@@ -6,7 +6,8 @@ create table usuarios
 (
     id_usuario int unsigned not null auto_increment,
     login_usuario varchar(30) not null unique,
-    senha_usuario char(40) not null,
+    senha_usuario varchar(40) not null,
+    nome_usuario varchar(100) not null,
     primary key (id_usuario)
 );
 CREATE TABLE Estado (
@@ -50,7 +51,9 @@ CREATE TABLE Peca (
     Altura_MM DECIMAL(10,2) NOT NULL,
     Espessura_MM DECIMAL(10,2) NOT NULL,
     Quantidade INT NOT NULL CHECK (Quantidade > 0),
-    Valor_Unitario DECIMAL(10,2) NOT NULL CHECK (Valor_Unitario >= 0)
+    Valor_Unitario DECIMAL(10,2) NOT NULL CHECK (Valor_Unitario >= 0),
+    usuario_criacao int unsigned not null,
+    foreign key (usuario_criacao) references usuarios (id_usuario)
 );
 
 CREATE TABLE Producao_Peca (
