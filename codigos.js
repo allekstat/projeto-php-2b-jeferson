@@ -159,8 +159,7 @@ function adicionar_material()
             </div>
             <div class='col'>
                 <span class='material-largura'>${$('#largura-material').val()}</span>
-            </div>
-            <div class='col'>
+                    <span>X</span>  
                 <span class='material-comprimento'>${$('#comprimento-material').val()}</span>
             </div>
             <div class='col'>
@@ -168,8 +167,21 @@ function adicionar_material()
             </div>
         </div>
     `);
-    api({rota: 'peca', metodo: 'POST',dados: {campos: ['Nome_Peca', 'Valor_Unitario', 'Quantidade', 'Largura_MM', 'Altura_MM', 'Espessura_MM'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()]}})
-    .then( () => buscar_materiais());        
+            api({
+                metodo: 'POST',
+                rota: "chapa",
+                dados: {
+                    campos: ['Nome_Tipo', 'Largura_MM', 'Altura_MM', 'Espessura', 'Quantidade', 'Valor_Chapa'],
+                    valores: [
+                        $('#nome-material').val(),
+                        $('#largura-material').val(),
+                        $('#comprimento-material').val(),
+                        $('#espessura-material').val(),
+                        $('#quantidade-material').val(),
+                        $('#preco-material').val()
+                    ]
+                }
+            }).then( () => buscar_materiais());   
 
 }
 function remover_material()
@@ -230,21 +242,29 @@ function enviar_peca() {
 }
 
 function enviar_chapa(){
-            api({
-                metodo: 'POST',
-                rota: "chapa",
-                dados: {
-                    campos: ['Nome_Tipo', 'Largura_MM', 'Altura_MM', 'Espessura', 'Quantidade', 'Valor_Chapa'],
-                    valores: [
-                        $('#nome-material').val(),
-                        $('#largura-material').val(),
-                        $('#comprimento-material').val(),
-                        $('#espessura-material').val(),
-                        $('#quantidade-material').val(),
-                        $('#preco-material').val()
-                    ]
-                }
-            });
+    // console.log([
+    //     $('#nome-material').val(),
+    //     $('#largura-material').val(),
+    //     $('#comprimento-material').val(),
+    //     $('#espessura-material').val(),
+    //     $('#quantidade-material').val(),
+    //     $('#preco-material').val()
+    // ]);
+            // api({
+            //     metodo: 'POST',
+            //     rota: "chapa",
+            //     dados: {
+            //         campos: ['Nome_Tipo', 'Largura_MM', 'Altura_MM', 'Espessura', 'Quantidade', 'Valor_Chapa'],
+            //         valores: [
+            //             $('#nome-material').val(),
+            //             $('#largura-material').val(),
+            //             $('#comprimento-material').val(),
+            //             $('#espessura-material').val(),
+            //             $('#quantidade-material').val(),
+            //             $('#preco-material').val()
+            //         ]
+            //     }
+            // })
 
 }
 
