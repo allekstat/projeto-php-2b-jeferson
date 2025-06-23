@@ -130,6 +130,7 @@ function buscar_materiais()
                             <i class="bi bi-x-circle"></i>
                         </a>
                     </div>
+
                 </div>
             `);
             $('.apagar-material').click(remover_material);
@@ -184,11 +185,17 @@ function adicionar_material()
             }).then( () => buscar_materiais());   
 
 }
-function remover_material()
-{
-    console.log($(this));
-    api({metodo: 'DELETE', rota: 'pecas/' + $(this).parent().parent().data('material')})
-    .then(() => buscar_materiais());
+function remover_material() {
+    const codChapa = $(this).closest('[data-material]').data('material');
+    $(this).closest('.row').remove();
+
+    api({ metodo: 'DELETE', rota: 'chapa/' + codChapa })
+        .then(() => {
+            console.success('Deletado com sucesso')
+        }) 
+        .catch(err => {
+            alert('Erro ao deletar material!');
+        });
 }
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function() {
@@ -219,9 +226,8 @@ function precoEstimado(){
     $('a.adicionar-campo').click(adicionar_campo);
     $('a.remover-campo').click(remover_campo);
     $('a.adicionar-material').click(adicionar_material);
-    $('a.remover-material').click(remover_material);
+    $(document).on('click', '.apagar-material', remover_material);    
     $('a.enviar-peca').click(enviar_peca);
-    $('a.enviar-chapa').click(enviar_chapa);
     buscar_materiais();
 
     
@@ -241,32 +247,6 @@ function enviar_peca() {
             })
 }
 
-function enviar_chapa(){
-    // console.log([
-    //     $('#nome-material').val(),
-    //     $('#largura-material').val(),
-    //     $('#comprimento-material').val(),
-    //     $('#espessura-material').val(),
-    //     $('#quantidade-material').val(),
-    //     $('#preco-material').val()
-    // ]);
-            // api({
-            //     metodo: 'POST',
-            //     rota: "chapa",
-            //     dados: {
-            //         campos: ['Nome_Tipo', 'Largura_MM', 'Altura_MM', 'Espessura', 'Quantidade', 'Valor_Chapa'],
-            //         valores: [
-            //             $('#nome-material').val(),
-            //             $('#largura-material').val(),
-            //             $('#comprimento-material').val(),
-            //             $('#espessura-material').val(),
-            //             $('#quantidade-material').val(),
-            //             $('#preco-material').val()
-            //         ]
-            //     }
-            // })
-
-}
 
 
 
