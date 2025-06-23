@@ -11,6 +11,9 @@ function api({rota = '', metodo = 'GET', dados = {}})
         });
     });
 }
+
+let atualiza = 0;
+
 function mudar_tela({ data: tela })
 {
     $('div.tela-' + tela)
@@ -20,17 +23,14 @@ function mudar_tela({ data: tela })
         
     if (tela == 'planos')
     {
-        api({rota: 'madeiras'})
-        .then(retorno =>
-        {
-            $('.campos .campo-tipo').empty();
-            for (let i = 0; i < retorno.dados.length; i++)
-            {
-                $('.campos .campo-tipo').append(`
-                    <option value='${retorno.dados[i].Cod_mad}'>${retorno.dados[i].Nome_mad}</option>
-                `);
-            }
-        });
+        atualiza = atualiza + 1;
+        if(atualiza < 2){
+            $('div.tela-planos .campos').empty();
+            console.log(atualiza);
+            adicionar_campo()
+        };
+
+        
     }
 
 }
@@ -52,47 +52,45 @@ async function listar_materiais()
     });
     
 }
-function adicionar_campo()
-{
-    $('div.tela-planos .campos')
-        .append(`
-            <div class='py-2 row'>
-                <div class='col'>
-                    <input placeholder='Nome da peça' class='campo-nome form-control' />
-                </div>
-                <div class='col'>
-                    <select placeholder='Tipo de material' class='campo-tipo form-control'>
-                        <option value='mdf-nogueira-veneto'>Nogueira Veneto</option>
-                        <option value='mdf-carvalho-amendoa'>Carvalho Amêndoa</option>
-                        <option value='mdf-nogueira'>Nogueira</option>
-                        <option value='mdf-carvalho'>Carvalho</option>
-                        <option value='mdf-itauba'>Itauba</option>
-                        <option value='mdf-cedro'>Cedro</option>
-                        <option value='mdf-pinus'>Pinus</option>
-                        <option value='mdf-cumaru'>Cumaru</option>
-                        <option value='mdf-mogno'>Mogno</option>
-                        <option value='mdf-eucalipto'>Eucalipto</option>
-                        <option value='mdf-jequitiba'>Jequitiba</option>
-                        <option value='mdf-ipe'>ipe</option>
-                        <option value='mdf-jacaranda'>Jacaranda</option>
-                        <option value='mdf-jatoba'>Jatoba</option>
-                        <option value='mdf-pinho'>Pinho</option>
-                        <option value='mdf-branco'>MDF Branco</option>
-                        <option value='mdf-texturizado'>MDF Texturizado</option>
-                    </select>
-                </div>
-                <div class='col'>
-                    <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class='campo-comprimento form-control' />
-                </div>
-                <div class='col'>
-                    <input placeholder='Largura (mm)' type='number' step='1' min='1' class='campo-largura form-control' />
-                </div>
-                <div class='col'>
-                    <input placeholder='Espessura (mm)' type='number' step='1' min='1' class='campo-espessura form-control' />
-                </div>
+function adicionar_campo() {
+    const campoHtml = `
+        <div class='py-2 row'>
+            <div class='col'>
+                <select placeholder='Tipo de material' class='campo-tipo form-control'>
+                <option value="Indefinido">Selecione a Chapa</option>
+                </select>
             </div>
-        `);
+            <div class='col'>
+                <input placeholder='Nome da peça' class='campo-nome form-control' />
+            </div>
+            <div class='col'>
+                <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class='campo-comprimento form-control' />
+            </div>
+            <div class='col'>
+                <input placeholder='Largura (mm)' type='number' step='1' min='1' class='campo-largura form-control' />
+            </div>
+            <div class='col'>
+                <input placeholder='Espessura (mm)' type='number' step='1' min='1' class='campo-espessura form-control' />
+            </div>
+        </div>
+    `;
+
+    const $novoCampo = $(campoHtml).appendTo('div.tela-planos .campos');
+    
+    const $novoSelect = $novoCampo.find('.campo-tipo');
+    
+    opcoes_materiais($novoSelect);
 }
+
+function opcoes_materiais($select) {
+    api({rota: 'chapa'})
+        .then(retorno => {
+            retorno.dados.forEach(v => {
+                $select.append(`<option value='mdf-${v.Nome_Tipo}'>${v.Nome_Tipo}, ${v.Altura_MM}X${v.Largura_MM}mm, ${v.Espessura}(${v.Quantidade})</option>`);
+            });
+        });
+}
+
 function remover_campo()
 {
     $('div.tela-planos .campos')
@@ -100,22 +98,32 @@ function remover_campo()
         .last()
         .remove();
 }
+
+
 function buscar_materiais()
 {
     $('.campos-material').prevAll().remove();
-    api({rota: 'pecas'})
+    api({rota: 'chapa'})
     .then(retorno => retorno.dados.forEach(v => 
         {
             $('.campos-material').before(`
-                <div data-material='${v.Cod_Peca}' class='py-2 align-items-center row'>
+                <div data-material='${v.Cod_Chapa}' class='py-2 align-items-center row'>
                     <div class='col'>
-                        <span class='material-nome'>${v.Nome_Peca}</span>
+                        <span class='material-nome'>${v.Nome_Tipo}</span>
                     </div>
                     <div class='col'>
-                    <span class='material-preco'>${v.Valor_Unitario}</span>
+                    <span class='material-preco'>${v.Valor_Chapa}</span>
                     </div>
                     <div class='col'>
                         <span class='material-quantidade'>${v.Quantidade}</span>
+                    </div>
+                    <div class='col'>
+                        <span class='material-largura'>${v.Largura_MM}</span>
+                        <span>X</span>
+                        <span class='material-comprimento'>${v.Altura_MM}</span>
+                    </div>
+                    <div class='col'>
+                        <span class='material-espessura'>${v.Espessura}</span>
                     </div>
                     <div class="col-sm-1">
                         <a class="apagar-material btn btn-link text-danger">
@@ -128,6 +136,8 @@ function buscar_materiais()
         }
     ));
 }
+
+
 function adicionar_material()
 {
     if (!($('#nome-material').val().trim() &&
@@ -135,7 +145,7 @@ function adicionar_material()
         $('#quantidade-material').val().trim() &&
         $('#largura-material').val().trim() &&
         $('#comprimento-material').val().trim() &&
-        $('#espessura-material').val().trim())) return alert('digite os dados corretamente');
+        $('#espessura-material').val().trim())) return alert('Preencha todo o campo');
     $('.campos-material').before(`
         <div class='py-2 row'>
             <div class='col'>
@@ -158,8 +168,9 @@ function adicionar_material()
             </div>
         </div>
     `);
-    api({metodo: 'POST', rota: 'pecas', dados: {campos: ['Nome_Peca', 'Valor_Unitario', 'Quantidade', 'Largura_MM', 'Altura_MM', 'Espessura_MM'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()]}})
-    .then( () => buscar_materiais());
+    api({rota: 'peca', metodo: 'POST',dados: {campos: ['Nome_Peca', 'Valor_Unitario', 'Quantidade', 'Largura_MM', 'Altura_MM', 'Espessura_MM'], valores: [$('#nome-material').val(),$('#preco-material').val() ,$('#quantidade-material').val(), $('#largura-material').val(),$('#comprimento-material').val(),$('#espessura-material').val()]}})
+    .then( () => buscar_materiais());        
+
 }
 function remover_material()
 {
@@ -197,7 +208,48 @@ function precoEstimado(){
     $('a.remover-campo').click(remover_campo);
     $('a.adicionar-material').click(adicionar_material);
     $('a.remover-material').click(remover_material);
+    $('a.enviar-peca').click(enviar_peca);
+    $('a.enviar-chapa').click(enviar_chapa);
     buscar_materiais();
+
+    
+function enviar_peca() {
+            api({
+                metodo: 'POST',
+                rota: 'peca',
+                dados: {
+                    campos: ['Nome_Peca', 'Largura_MM','Altura_MM', 'Espessura'],
+                    valores: [
+                        $('.campo-nome').val(),
+                        $('.campo-largura').val(),
+                        $('.campo-comprimento').val(),
+                        $('.campo-espessura').val()
+                    ]
+                }
+            })
+}
+
+function enviar_chapa(){
+            api({
+                metodo: 'POST',
+                rota: "chapa",
+                dados: {
+                    campos: ['Nome_Tipo', 'Largura_MM', 'Altura_MM', 'Espessura', 'Quantidade', 'Valor_Chapa'],
+                    valores: [
+                        $('#nome-material').val(),
+                        $('#largura-material').val(),
+                        $('#comprimento-material').val(),
+                        $('#espessura-material').val(),
+                        $('#quantidade-material').val(),
+                        $('#preco-material').val()
+                    ]
+                }
+            });
+
+}
+
+
+
     $('#botao-logar').click(function ()
     {
         api({metodo: 'POST', rota: 'login', dados: {usuario: $('#usuario-login').val(), senha: $('#senha-login').val()}})

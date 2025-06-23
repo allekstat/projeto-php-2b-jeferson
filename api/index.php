@@ -25,8 +25,11 @@ switch ($caminho_rota[0])
     case 'dados':
         api_dados();
         break;
-    case 'pecas':
+    case 'peca':
         api_pecas($caminho_rota[1]);
+        break;
+    case 'chapa':
+        api_chapa($caminho_rota[1]);
         break;
     default:
         retorno(404, 'rota nao encontrada');
@@ -127,9 +130,42 @@ function api_pecas($id)
         case 'POST':
             if (!is_null($id)) retorno(400, 'proibido sobrescrever');
             session_start();
-            $afetados = insert('Peca', [...$_POST['campos'], 'usuario_criacao'], [...$_POST['valores'], $_SESSION['id_usuario']]);
+            if (!isset($_POST['campos']) || !isset($_POST['valores'])) {
+                retorno(400, 'Campos ou valores não enviados.');
+            }
+            $afetados = insert('Peca', $_POST['campos'], $_POST['valores']);
             $codigo = $afetados > 0 ? 200 : 400;
             $mensagem = $afetados > 0 ? 'peca criada.' : 'nao criado.';
+            retorno($codigo, $mensagem, ['criados' => $afetados]);
+            break;
+    }
+}
+
+function api_chapa($id)
+{
+    if (!isset($id) || $id == '') $id = null;
+    switch ($_SERVER['REQUEST_METHOD'])
+    {
+        case 'GET':
+            session_start();
+            $chapa = select(['*'], 'chapa');
+            $codigo = count($chapa) > 0 ? 200 : 400;
+            $mensagem = count($chapa) > 0 ? 'ok.' : 'nenhum resultado.';
+            retorno($codigo, $mensagem, $chapa);
+            break;
+        case 'DELETE':
+            if (is_null($id)) retorno(400, 'proibido apagar todos');
+            $afetados = delete('chapa', "Cod_Chapa = $id");
+            $codigo = $afetados > 0 ? 200 : 400;
+            $mensagem = $afetados > 0 ? 'ok.' : 'nenhum resultado.';
+            retorno($codigo, $mensagem, ['removidos' => $afetados]);
+            break;
+        case 'POST':
+            if (!is_null($id)) retorno(400, 'proibido sobrescrever');
+            session_start();
+            $afetados = insert('chapa', [...$_POST['valores']]);
+            $codigo = $afetados > 0 ? 200 : 400;
+            $mensagem = $afetados > 0 ? 'Chapa criada.' : 'nao criado.';
             retorno($codigo, $mensagem, ['criados' => $afetados]);
             break;
     }

@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class='pb-3 mb-3 d-flex col-sm-1'>
-                        <a class='adicionar-material btn btn-link'>
+                        <a class='adicionar-material enviar-chapa btn btn-link'>
                             <i class='bi bi-plus-circle'></i>
                         </a>
                     </div>
@@ -79,26 +79,12 @@
                     <div class='campos col'>
                         <div class='py-2 row'>
                             <div class='col'>
-                                <input placeholder='Nome da peça' class='campo-nome form-control' />
+                                <select placeholder='Tipo de material' class='campo-tipo form-control'>
+                                    <option value="indefinido">Selecione a Chapa</option>
+                                </select>
                             </div>
                             <div class='col'>
-                                <select placeholder='Tipo de material' class='campo-tipo form-control'>
-                                    <option value='mdf-nogueira'>Nogueira</option>
-                                    <option value='mdf-carvalho'>Carvalho</option>
-                                    <option value='mdf-itauba'>Itauba</option>
-                                    <option value='mdf-cedro'>Cedro</option>
-                                    <option value='mdf-pinus'>Pinus</option>
-                                    <option value='mdf-cumaru'>Cumaru</option>
-                                    <option value='mdf-mogno'>Mogno</option>
-                                    <option value='mdf-eucalipto'>Eucalipto</option>
-                                    <option value='mdf-jequitiba'>Jequitiba</option>
-                                    <option value='mdf-ipe'>ipe</option>
-                                    <option value='mdf-jacaranda'>Jacaranda</option>
-                                    <option value='mdf-jatoba'>Jatoba</option>
-                                    <option value='mdf-pinho'>Pinho</option>
-                                    <option value='mdf-branco'>MDF Branco</option>
-                                    <option value='mdf-texturizado'>MDF Texturizado</option>
-                                </select>
+                                <input placeholder='Nome da peça' class='campo-nome form-control' />
                             </div>
                             <div class='col'>
                                 <input placeholder='Comprimento (mm)' type='number' step='1' min='1' class='campo-comprimento form-control' />
@@ -112,7 +98,7 @@
                         </div>
                     </div>
                     <div class='pb-2 mb-3 d-flex col-sm-1'>
-                        <a class = 'enviar-campo btn btn-link'>
+                        <a class = 'enviar-peca btn btn-link text-success'>
                             <i class='bi bi-check-circle'></i>
                         </a>
                         <a class='adicionar-campo btn btn-link'>
