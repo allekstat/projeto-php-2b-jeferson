@@ -115,7 +115,7 @@ function api_pecas($id)
     {
         case 'GET':
             session_start();
-            $pecas = select(['*'], 'Peca', [is_null($id) ? 'usuario_criacao = ' . $_SESSION['id_usuario'] : "Cod_Peca = $id"]);
+            $pecas = select(['*'], 'Peca', [is_null($id) ? "" : "Cod_Peca = $id"]);
             $codigo = count($pecas) > 0 ? 200 : 400;
             $mensagem = count($pecas) > 0 ? 'ok.' : 'nenhum resultado.';
             retorno($codigo, $mensagem, $pecas);

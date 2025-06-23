@@ -11,30 +11,6 @@ create table usuarios
     primary key (id_usuario)
 );
 
--- #CREATE TABLE Estado (
--- #    Sigla_Est CHAR(2) NOT NULL PRIMARY KEY,
--- #    Nome_Est VARCHAR(50) NOT NULL UNIQUE
--- #);
-
--- #CREATE TABLE Cidade (
--- #    Cod_Cidade INT NOT NULL PRIMARY KEY,
--- #    Sigla_Est CHAR(2) NOT NULL,
--- #    FOREIGN KEY (Sigla_Est) REFERENCES Estado(Sigla_Est)
--- #);
-
--- #CREATE TABLE Cliente (
--- #    Cod_Cli INT NOT NULL PRIMARY KEY,
--- #    Cod_Cid INT NOT NULL,
--- #    Nome_Cli VARCHAR(200) NOT NULL,
--- #    Sexo_Cli CHAR(1) NOT NULL CHECK (Sexo_Cli IN ('F','M')),
--- #    FOREIGN KEY (Cod_Cid) REFERENCES Cidade(Cod_Cidade)
--- #);
-
--- #CREATE TABLE Madeira_Tipo (
--- #    Cod_Tipo INT NOT NULL PRIMARY KEY,
--- #    Nome_Tipo VARCHAR(100) NOT null UNIQUE
--- #);
-
 CREATE TABLE Chapa (
     Cod_Chapa INT NOT NULL PRIMARY KEY auto_increment,
     Nome_Tipo VARCHAR(100) NOT NULL,

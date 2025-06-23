@@ -33,6 +33,10 @@ function mudar_tela({ data: tela })
         
     }
 
+    if( tela == "resultados") {
+        exibirPlanos();
+    }
+
 }
 async function listar_materiais()
 {
@@ -82,34 +86,35 @@ function adicionar_campo() {
     opcoes_materiais($novoSelect);
 }
 function exibirPlanos(){
-    const campoHtml = `
-            <div>
-                <label for=""class="form-control">Planos Disponíveis
-                    <select class="form-control" placeholder="Escolha o Plano">
-                    </select>
-                </label>
-            </div>
-            <div class='valor-resultado'>
+    // const campoHtml = `
+    //         <div>
+    //             <label for=""class="form-control">Planos Disponíveis
+    //                 <select class="form-control" placeholder="Escolha o Plano">
+    //                 </select>
+    //             </label>
+    //         </div>
+    //         <div class='valor-resultado'>
                             
-            </div>
-                <div class='imagem-resultado'>
-                    <img src='./imagens/Logo-PlanoDeCorteMini.jpg' class='galeria w-50' alt=''>
-                </div>
-    `;
+    //         </div>
+    //             <div class='imagem-resultado'>
+    //                 <img src='./imagens/Logo-PlanoDeCorteMini.jpg' class='galeria w-50' alt=''>
+    //             </div>
+    // `;
 
-    const $novoCampo = $(campoHtml).appendTo('div.tela-resultados .planos-producao');
+    // const $novoCampo = $(campoHtml).appendTo('div.tela-resultados .planos-producao');
     
-    const $novoSelect = $novoCampo.find('#planos-resultado');
+    // const $novoSelect = $novoCampo.find('#planos-resultado');
     
-    opcoes_planos($novoSelect);
+    opcoes_planos();
 }
 
 
-function opcoes_planos($select) {
+function opcoes_planos() {
     api({rota: 'peca'})
         .then(retorno => {
+            $('#plano-resultado').empty()
             retorno.dados.forEach(v => {
-                $select.append(`<option>${v.Nome_Peca}</option>`);
+                $('#planos-resultado').append(`<option>${v.Nome_Peca}</option>`);
             })
         })
 }
@@ -275,10 +280,10 @@ function enviar_peca() {
                 dados: {
                     campos: ['Nome_Peca', 'Largura_MM','Altura_MM', 'Espessura'],
                     valores: [
-                        $('.campo-nome').val(),
-                        $('.campo-largura').val(),
-                        $('.campo-comprimento').val(),
-                        $('.campo-espessura').val()
+                        $(this).parent().prev().children(':last').find('.campo-nome').val(),
+                        $(this).parent().prev().children(':last').find('.campo-largura').val(),
+                        $(this).parent().prev().children(':last').find('.campo-comprimento').val(),
+                        $(this).parent().prev().children(':last').find('.campo-espessura').val()
                     ]
                 }
             }).then(
@@ -287,7 +292,7 @@ function enviar_peca() {
                     rota: 'chapa',
                     dados : {
                         campos: ['Quantidade'],
-                        valores : [-1]
+                        valores : ["Quantidade -1"]
                     }
 
                 })
