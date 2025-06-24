@@ -81,14 +81,47 @@ function adicionar_campo() {
     
     opcoes_materiais($novoSelect);
 }
+function exibirPlanos(){
+    const campoHtml = `
+            <div>
+                <label for=""class="form-control">Planos Disponíveis
+                    <select class="form-control" placeholder="Escolha o Plano">
+                    </select>
+                </label>
+            </div>
+            <div class='valor-resultado'>
+                            
+            </div>
+                <div class='imagem-resultado'>
+                    <img src='./imagens/Logo-PlanoDeCorteMini.jpg' class='galeria w-50' alt=''>
+                </div>
+    `;
+
+    const $novoCampo = $(campoHtml).appendTo('div.tela-resultados .planos-producao');
+    
+    const $novoSelect = $novoCampo.find('#planos-resultado');
+    
+    opcoes_planos($novoSelect);
+}
+
+
+function opcoes_planos($select) {
+    api({rota: 'peca'})
+        .then(retorno => {
+            retorno.dados.forEach(v => {
+                $select.append(`<option>${v.Nome_Peca}</option>`);
+            })
+        })
+}
+
 
 function opcoes_materiais($select) {
     api({rota: 'chapa'})
         .then(retorno => {
             retorno.dados.forEach(v => {
                 $select.append(`<option value='mdf-${v.Nome_Tipo}'>${v.Nome_Tipo}, ${v.Altura_MM}X${v.Largura_MM}mm, ${v.Espessura}(${v.Quantidade})</option>`);
-            });
-        });
+            })
+        })
 }
 
 function remover_campo()
@@ -207,6 +240,8 @@ document.querySelectorAll('.button').forEach(button => {
     });
 });
 function precoEstimado(){
+    api({rota:'calculo'})
+
     precoEstimado = api({rota: 'calculo', dados: {resultados}});
     console.log(precoEstimado);
     
@@ -218,7 +253,8 @@ function precoEstimado(){
         `)
 
 
-}$(document).ready(function ()
+}
+$(document).ready(function ()
 {
     $('a.aba-materiais').click('materiais', mudar_tela);
     $('a.aba-planos').click('planos', mudar_tela);
@@ -232,6 +268,7 @@ function precoEstimado(){
 
     
 function enviar_peca() {
+
             api({
                 metodo: 'POST',
                 rota: 'peca',
@@ -244,7 +281,17 @@ function enviar_peca() {
                         $('.campo-espessura').val()
                     ]
                 }
-            })
+            }).then(
+                api({
+                    metodo:'UPDATE',
+                    rota: 'chapa',
+                    dados : {
+                        campos: ['Quantidade'],
+                        valores : [-1]
+                    }
+
+                })
+            )
 }
 
 

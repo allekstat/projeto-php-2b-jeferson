@@ -165,8 +165,16 @@ function api_chapa($id)
             session_start();
             $afetados = insert('chapa', $_POST['campos'] ,$_POST['valores']);
             $codigo = $afetados > 0 ? 200 : 400;
-            $mensagem = $afetados > 0 ? 'Chapa criada.' : 'nao criado.';
+            $mensagem = $afetados > 0 ? 'Chapa criada.' : 'Não criada.';
             retorno($codigo, $mensagem, ['criados' => $afetados]);
+            break;
+        case 'UPDATE':
+            if(!is_null($id)) retorno(400, 'proibido sobrescrever');
+            session_start();
+            $afetados = update('chapa', $_POST['campos'], $_POST['valores']);
+            $codigo = $afetados > 0 ? 200 : 400;
+            $mensagem = $afetados > 0 ? 'Chapas atualizadas.' : 'Sem atualização.';
+            retorno($codigo, $mensagem, ['Atualizados' => $afetados]);
             break;
     }
 }

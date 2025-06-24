@@ -5,7 +5,7 @@
 function calcularPrecoEstimado($codChapa, $codPeca, $quantidade) {
     $conexao = conexao(); 
     $stmt = $conexao->prepare("
-        SELECT Largura_MM, Altura_MM, Espessura_MM, Valor_Chapa
+        SELECT Largura_MM, Altura_MM, Espessura, Valor_Chapa
         FROM Chapa
         WHERE Cod_Chapa = ?
     ");
@@ -16,7 +16,7 @@ function calcularPrecoEstimado($codChapa, $codPeca, $quantidade) {
     $stmt->close();
 
     $stmt = $$conexao->prepare("
-        SELECT Largura_MM, Altura_MM, Espessura_MM
+        SELECT Largura_MM, Altura_MM, Espessura
         FROM Peca
         WHERE Cod_Peca = ?
     ");
