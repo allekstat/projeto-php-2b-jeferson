@@ -86,25 +86,6 @@ function adicionar_campo() {
     opcoes_materiais($novoSelect);
 }
 function exibirPlanos(){
-    // const campoHtml = `
-    //         <div>
-    //             <label for=""class="form-control">Planos Disponíveis
-    //                 <select class="form-control" placeholder="Escolha o Plano">
-    //                 </select>
-    //             </label>
-    //         </div>
-    //         <div class='valor-resultado'>
-                            
-    //         </div>
-    //             <div class='imagem-resultado'>
-    //                 <img src='./imagens/Logo-PlanoDeCorteMini.jpg' class='galeria w-50' alt=''>
-    //             </div>
-    // `;
-
-    // const $novoCampo = $(campoHtml).appendTo('div.tela-resultados .planos-producao');
-    
-    // const $novoSelect = $novoCampo.find('#planos-resultado');
-    
     opcoes_planos();
 }
 
@@ -232,7 +213,7 @@ function remover_material() {
             console.success('Deletado com sucesso')
         }) 
         .catch(err => {
-            alert('Erro ao deletar material!');
+            console.log('Erro ao deletar material!');
         });
 }
 document.querySelectorAll('.button').forEach(button => {
@@ -291,8 +272,8 @@ function enviar_peca() {
                     metodo:'UPDATE',
                     rota: 'chapa',
                     dados : {
-                        campos: ['Quantidade'],
-                        valores : ["Quantidade -1"]
+                        campos: 'Quantidade',
+                        valores : "Quantidade-1"
                     }
 
                 })
