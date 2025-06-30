@@ -1,4 +1,6 @@
 <?php
+
+
 if (session_start() == false)
 {
     exit;
@@ -18,4 +20,5 @@ else
     $pagina = 'login';
     $titulo = 'Login :: Sistema de Cálculo de Custos - Marcenaria';
 }
+
 include 'template.php';

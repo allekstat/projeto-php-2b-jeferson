@@ -7,7 +7,7 @@ create table usuarios
     id_usuario int unsigned not null auto_increment,
     login_usuario varchar(30) not null unique,
     senha_usuario varchar(40) not null,
-    nome_usuario varchar(100) not null,
+    nome_usuario varchar(100),
     primary key (id_usuario)
 );
 
@@ -79,7 +79,7 @@ JOIN Chapa mt ON mt.Cod_Chapa = c.Cod_Chapa;
 
 select * from usuarios;
 
-select * from peca;
+select * from Peca;
 
-select * from chapa;
+select * from Chapa;
 
